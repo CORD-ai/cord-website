@@ -1,0 +1,125 @@
+site_name: Cord AI Website
+site_url: https://example.com/
+repo_url: https://github.com/CORD-ai/Website
+repo_name: Cord-ai/Website
+theme:
+  name: material
+  custom_dir: overrides
+  icon:
+    repo: fontawesome/brands/github
+    admonition:
+      bug: octicons/bug-16
+      note: octicons/tag-16
+      info: octicons/info-16
+      danger: octicons/zap-16
+      quote: octicons/quote-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      warning: octicons/alert-16
+      example: octicons/beaker-16
+      failure: octicons/x-circle-16
+      question: octicons/question-16
+      abstract: octicons/checklist-16
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Light Mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Dark Mode
+  font:
+    text: Ubuntu
+  language: en
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  features:
+    - search.share
+    - search.suggest
+    - navigation.top
+    - navigation.tabs
+    - search.highlight
+    - content.tabs.link
+    - navigation.instant
+    - navigation.tracking
+    - content.code.annotate
+    - navigation.tabs.sticky
+plugins:
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
+      enable_creation_date: true
+  - tags:
+      tags_file: tags.md
+  - search:
+      lang: en
+      separator: '[\s\-\.]'
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/mathjax.js
+  - javascripts/tablesort.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://xyz.com/xyz
+      name: Cord AI on Twitter
+    - icon: fontawesome/brands/github
+      link: https://xyz.com/xyz
+      name: Cord AI on Github
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/cord-ai1/mycompany/
+      name: Cord AI on LinkedIn
+    - icon: fontawesome/brands/instagram
+      link: https://xyz.com
+      name: Cord AI on Instagram
+    - icon: fontawesome/brands/medium
+      link: https://xyz.com
+      name: Cord AI on Medium
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:xyz@gmail.com
+      name: Send an email to Cord AI
+copyright: Copyright &copy; 2022 Cord AI
+markdown_extensions:
+  - meta
+  - abbr
+  - tables
+  - def_list
+  - footnotes
+  - attr_list
+  - admonition
+  - md_in_html
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.caret
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.tabbed:
+      alternate_style: true 
