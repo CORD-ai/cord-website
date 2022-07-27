@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', 'sans-serif';
+
+}
+
+body{
+    background: url('src\assets\images\AI-human (1).jpg') no-repeat top center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.wrapper{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 20px;
+}
+
+.contact-form{
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: rgba(0,0,0,0.8);
+    padding:30px;
+    border-radius: 5px;
+    display:flex;
+    box-shadow: 0 0 10px;
+}
+
+.input-fields{
+    display:flex;
+    flex-direction: column;
+    margin-right: 4%;
+
+}
+
+.input-fields .msg{
+    width: 48%;
+}
+
+.input-fields .input .msg textarea{
+    margin: 10px 0;
+    background: transparent;
+    border:0;
+    border-bottom: 2px solid  #7453fc;
+}
