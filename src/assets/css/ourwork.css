@@ -1,0 +1,19 @@
+body {
+    background:  rgb(247, 230, 230);
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #7453fc;
+    padding-bottom: 10px;
+}
+
+.accordion-button {
+    background: #FF8FB1;
+}
+
+.accordion-body {
+    background: #fff;
+}
