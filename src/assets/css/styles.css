@@ -1,9 +1,6 @@
 /*
-
 TemplateMo 577 Liberty Market
-
 https://templatemo.com/tm-577-liberty-market
-
 */
 
 /* ---------------------------------------------
@@ -18,7 +15,6 @@ Table of contents
 07. testimonials
 08. contact
 09. footer
-
 --------------------------------------------- */
 /* 
 ---------------------------------------------
@@ -126,7 +122,7 @@ img {
   margin-bottom: 0px;
   color: #7453fc;
   font-weight: 700;
-  width: 100%;
+  
 }
 
 .card {
@@ -256,7 +252,6 @@ Carousel Styles
     height: 11em;
   }
 }
-
 .card-title{
   font-size: 1.5em;
   font-weight: 700;
@@ -265,11 +260,9 @@ Carousel Styles
 .card-text{
   color: rgba(131, 224, 195, 0.979);
 }
-
 .card{
   border-radius: 10%;
 }
-
 .card-img-top{
   border-radius: 7%;
 } */
@@ -404,7 +397,6 @@ section {
   text-transform: capitalize;
   color: #fff;
 }
-
 .section-heading h2 em {
   color: #7453fc;
   font-style: normal;
@@ -1265,11 +1257,10 @@ Create NFT Style
 
 .footer{
   background-size:cover;
-  margin-right: -500px;
-  margin-left: -500px;
-  margin-bottom: -500px;
+  margin-right: -80px;
+  margin-left: -80px;
+  margin-bottom: -80px;
 }
-
 
 /* 
 ---------------------------------------------
