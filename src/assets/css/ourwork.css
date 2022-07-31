@@ -1,5 +1,5 @@
 body {
-    background:  rgb(247, 230, 230);
+    background: #e1e1e1;
 }
 
 h1{
@@ -11,7 +11,7 @@ h1{
 }
 
 .accordion-button {
-    background: #FF8FB1;
+    background: #FCCBCB;
 }
 
 .accordion-body {
