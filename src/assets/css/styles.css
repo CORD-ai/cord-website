@@ -126,7 +126,7 @@ img {
   margin-bottom: 0px;
   color: #7453fc;
   font-weight: 700;
-  
+  width: 100%;
 }
 
 .card {
@@ -1265,9 +1265,7 @@ Create NFT Style
 
 .footer{
   background-size:cover;
-  margin-right: -80px;
-  margin-left: -80px;
-  margin-bottom: -80px;
+  width: 100%;
 }
 
 /* 
