@@ -2,20 +2,30 @@
 CORD AI website. 
 
 Main Page:
-  - Video to be changed
-  - Typeform for Join Our Community button
-  - Ongoing Session info to be added. To be converted to a owl carousel when there are many
-  - Contact Us currently working with FORMSUBMIT
+   [X]Make Join Our Community bigger
+   [X]Create Ongoing Session Cards
+   [X]Add Footer
+   [X]Add Facebook and Linkedin socials in footer
+   [X]Contact Us currently working on FormSubmit
+   []Change Video   
+   []Add Typeform for Join Our Community button
+   []Add Ongoing Session info/ Convert section to carousel if there are many
   
 Our Work:
-  Project Descriptions to be added
+  [X]Add Accordian
+  [X]Fill Project names
+  [X]Fill Project Creators
+  []Fill Project Description
 
 Blog:
-  mkdocs blog was not hosted, hence not added.
+  []Add mkdocs hosted blog
   
 Our Team:
-  Names, designations and socials to be filled up
+  [X]Add pictures
+  [X]Add names from picture descriptions 
+  [X]Add names for those whose picture descriptions were not specified
+  []Rest of the Names, designations and socials to be filled up
 
 
 For all pages:
-  Nav bar to be added
+  []Nav bar to be added
