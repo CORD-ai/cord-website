@@ -18,7 +18,7 @@ Our Work:
   - [ ]  Fill Project Description
 
 Blog:
-  []Add mkdocs hosted blog
+  - [ ] Add mkdocs hosted blog
   
 Our Team:
   - [X] Add pictures
