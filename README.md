@@ -7,9 +7,9 @@ Main Page:
    - [x] Add Footer
    - [x] Add Facebook and Linkedin socials in footer
    - [x] Contact Us currently working on FormSubmit
-   - [x] Change Video   
-   - [x] Add Typeform for Join Our Community button
-   - [x] Add Ongoing Session info/ Convert section to carousel if there are many
+   - [ ] Change Video   
+   - [ ] Add Typeform for Join Our Community button
+   - [ ] Add Ongoing Session info/ Convert section to carousel if there are many
   
 Our Work:
   - [x] Add Accordian
