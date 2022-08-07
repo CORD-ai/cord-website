@@ -24,8 +24,8 @@ Our Team:
   - [X] Add pictures
   - [X] Add names from picture descriptions 
   - [X] Add names for those whose picture descriptions were not specified
-  - [] Rest of the Names, designations and socials to be filled up
+  - [ ] Rest of the Names, designations and socials to be filled up
 
 
 For all pages:
-  - [] Nav bar to be added
+  - [ ] Nav bar to be added
