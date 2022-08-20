@@ -49,10 +49,10 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">About Us</a></li>
           <li><a class="nav-link scrollto" href="projects.html">Our work</a></li>
-          <li><a class="nav-link scrollto" href="teams.html">Team</a></li>
+          <li><a class="nav-link scrollto active" href="teams.html">Team</a></li>
           <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
           <li><a class="getstarted scrollto" href="https://join.slack.com/t/cordaicommunity/shared_invite/zt-1d114ndnn-Bj3HEqqS5UQ9asbvXL~4RA">Join community</a></li>
         </ul>
@@ -64,294 +64,236 @@
 
   <main id="main">
 
-            <!-- ======= Team Section ======= -->
-            <section id="team" class="team">
-              <div class="container">
-        
-                <div class="section-title" data-aos="fade-up">
+            <section id="portfolio" class="portfolio">
+              <div class="container" data-aos="fade-up">
+            
+                <div class="section-title">
                   <h2>Team</h2>
                   <p>Our team is always here to help</p>
                 </div>
-        
-                <div class="row">
-        
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="member">
+            
+                <!-- Team members are grouped based on the data-filter value. Paste the data-filters value in the div container each member for the grouping -->
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-lg-12">
+                    <ul id="portfolio-flters">
+                      <li data-filter="*" class="filter-active">All</li>
+                      <li data-filter=".filter-core-team">Core Team</li>
+                      <li data-filter=".filter-managers">Community Managers</li>
+                      <li data-filter=".filter-contributors">Contributors</li>
+                    </ul>
+                  </div>
+                </div>
+            
+
+                <div class="row portfolio-container justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                    <div class="portfolio-wrap">
                       <img src="assets/img/core_team/AneeshBose.jpg" class="img-fluid" alt="">
-                      <div class="member-info">
+
+                      <div class="portfolio-links">
+                          <a href="https://github.com/AneeshBose"><i class="bi bi-github"></i></a>
+                          <a href="https://twitter.com/bose_aneesh"><i class="bi bi-twitter"></i></a>
+                          <a href="https://www.linkedin.com/in/aneesh-bose-at-acm"><i class="bi bi-linkedin"></i></a>
+                      </div>
+                      <div class="portfolio-info">
                         <div class="member-info-content">
                           <h4>Aneesh Bose</h4>
-                          <span>ML Engineer @ Microsoft. NLP @ CAIR, DRDO  </span>
-                        </div>
-                        <div class="social">
-                           <a href="https://twitter.com/bose_aneesh"><i class="bi bi-twitter"></i></a>
-                          <a href="https://github.com/AneeshBose"><i class="bi bi-github"></i></a>
-                          <a href="https://www.linkedin.com/in/aneesh-bose-at-acm"><i class="bi bi-linkedin"></i></a>
+                          <span style="color: white;">ML Engineer @ Microsoft. NLP @ CAIR, DRDO</span>
                         </div>
                       </div>
                     </div>
                   </div>
-        
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="member">
+
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                    <div class="portfolio-wrap">
                       <img src="assets/img/core_team/Guneet.jpg" class="img-fluid" alt="">
-                      <div class="member-info">
+                      <div class="portfolio-links">
+                        <a href="https://github.com/guneetsk99"><i class="bi bi-github"></i></a>
+                        <a href="https://twitter.com/guneetsk99"><i class="bi bi-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/guneetsk99/"><i class="bi bi-linkedin"></i></a>
+                      </div>
+                      <div class="portfolio-info">
                         <div class="member-info-content">
                           <h4>Guneet Kohli</h4>
-                          <span>AI Engineer @ GreyOrange Robotics, GSoC'22 @ CERN, Ex-Researcher @ Alan Turing Institute</span>
-                        </div>
-                        <div class="social">
-                           <a href="https://twitter.com/guneetsk99"><i class="bi bi-twitter"></i></a>
-                          <a href="https://github.com/guneetsk99"><i class="bi bi-github"></i></a>
-                          <a href="https://www.linkedin.com/in/guneetsk99/"><i class="bi bi-linkedin"></i></a>
+                          <span style="color: white;">AI Engineer @ GreyOrange Robotics, GSoC'22 @ CERN, Ex-Researcher @ Alan Turing Institute</span>
                         </div>
                       </div>
                     </div>
                   </div>
-        
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="member">
+
+
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                    <div class="portfolio-wrap">
                       <img src="assets/img/core_team/Ashish.png" class="img-fluid" alt="">
-                      <div class="member-info">
-                        <div class="member-info-content">
-                          <h4>Ashish Vashist</h4>
-                          <span>Research intern @CMU ,Researcher @NUS </span>
-                        </div>
-                        <div class="social">
+                      <div class="portfolio-links">
                           <a href="https://twitter.com/v_ashish29"><i class="bi bi-twitter"></i></a>
                           <a href="https://github.com/Ash-29"><i class="bi bi-github"></i></a>
                           <a href="https://www.linkedin.com/feed/"><i class="bi bi-linkedin"></i></a>
+                      </div>
+                      <div class="portfolio-info">
+                        <div class="member-info-content">
+                          <h4>Ashish Vashist.</h4>
+                          <span style="color: white;">Research intern @CMU ,Researcher @NUS</span>
+                        </div>
                         </div>
                       </div>
-                    </div>
                   </div>
-        
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="member">
+
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                    <div class="portfolio-wrap">
                       <img src="assets/img/core_team/anindya.jpeg" class="img-fluid" alt="">
-                      <div class="member-info">
-                        <div class="member-info-content">
-                          <h4>Anindyadeep Sannigrahi</h4>
-                          <span>MLH Prep Fellow, Working on Computer Vision and Graph Nets. </span>
-                        </div>
-                        <div class="social">
+                      <div class="portfolio-links">
                           <a href="https://twitter.com/AnindyadeepS"><i class="bi bi-twitter"></i></a>
                           <a href="https://github.com/Anindyadeep"><i class="bi bi-github"></i></a>
                           <a href="https://www.linkedin.com/in/anindyadeep-sannigrahi-38683b1b6/"><i class="bi bi-linkedin"></i></a>
+                      </div>
+                      <div class="portfolio-info">
+                        <div class="member-info-content">
+                          <h4>Anindyadeep Sannigrahi</h4>
+                          <span style="color: white;">MLH Prep Fellow, Working on Computer Vision and Graph Nets</span>
                         </div>
                       </div>
                     </div>
                   </div>
+                  
 
-
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="member">
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                    <div class="portfolio-wrap">
                       <img src="assets/img/core_team/SayanDebSarkar.jpg" class="img-fluid" alt="">
-                      <div class="member-info">
-                        <div class="member-info-content">
-                          <h4>Sayan Dev Sarkar</h4>
-                          <span>MSc Computer Science @ ETH Zürich</span>
-                        </div>
-                        <div class="social">
+                      <div class="portfolio-links">
                           <a href="https://twitter.com/debsarkar_sayan"><i class="bi bi-twitter"></i></a>
                           <a href="https://github.com/sayands"><i class="bi bi-github"></i></a>
                           <a href="https://www.linkedin.com/in/sayands/"><i class="bi bi-linkedin"></i></a>
-                        </div>
                       </div>
-                    </div>
-                  </div>
-        
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="member">
-                      <img src="assets/img/core_team/Bharadwaj.png" class="img-fluid" alt="">
-                      <div class="member-info">
+                      <div class="portfolio-info">
                         <div class="member-info-content">
-                          <h4>Bharadwaj Chukala</h4>
-                          <span>MS Robotics @ UMD</span>
-                        </div>
-                        <div class="social">
-                          <a href="https://twitter.com/comicnerd07"><i class="bi bi-twitter"></i></a>
-                          <a href="https://github.com/bharadwaj-chukkala"><i class="bi bi-github"></i></a>
-                          <a href="https://www.linkedin.com/in/bharadwaj-chukkala/"><i class="bi bi-linkedin"></i></a>
+                          <h4>Sayan Deb Sarkar</h4>
+                          <span style="color: white;">MSc Computer Science @ ETH Zürich</span>
                         </div>
                       </div>
                     </div>
                   </div>
-        
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="member">
+
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                    <div class="portfolio-wrap">
                       <img src="assets/img/core_team/Adnan_Abbas.png" class="img-fluid" alt="">
-                      <div class="member-info">
+                      <div class="portfolio-links">
+                          <a href="https://www.linkedin.com/in/adnan-abbas-903b711a2/"><i class="bi bi-linkedin"></i></a>
+                      </div>
+                      <div class="portfolio-info">
                         <div class="member-info-content">
                           <h4>Adnan Abbas</h4>
-                          <span>Researcher @MIT ,UG @ IIT KGP</span>
-                        </div>
-                        <div class="social">
-                          <a href="https://www.linkedin.com/in/adnan-abbas-903b711a2/"><i class="bi bi-linkedin"></i></a>
+                          <span style="color: white;">Researcher @MIT ,UG @ IIT KGP</span>
                         </div>
                       </div>
                     </div>
                   </div>
-        
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="member">
+
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                    <div class="portfolio-wrap">
                       <img src="assets/img/core_team/n_sarkar_1.png" class="img-fluid" alt="">
-                      <div class="member-info">
-                        <div class="member-info-content">
-                          <h4>Nilanjan Sarkar</h4>
-                          <span>BITS Pilani Hyderabad, IIT Kanpur, Ex - Applied Scientist intern @Amazon</span>
-                        </div>
-                        <div class="social">
+                      <div class="portfolio-links">
                           <a href="https://github.com/nsbits"><i class="bi bi-github"></i></a>
                           <a href="https://www.linkedin.com/in/nilansarkar"><i class="bi bi-linkedin"></i></a>
+                      </div>
+                      <div class="portfolio-info">
+                        <div class="member-info-content">
+                          <h4>Nilanjan Sarkar</h4>
+                          <span style="color: white;">BITS Pilani Hyderabad, IIT Kanpur, Ex - Applied Scientist intern @Amazon</span>
                         </div>
                       </div>
                     </div>
                   </div>
 
-
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="member">
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                    <div class="portfolio-wrap">
                       <img src="assets/img/core_team/SivaKumar.png" class="img-fluid" alt="">
-                      <div class="member-info">
-                        <div class="member-info-content">
-                          <h4>Siva Kumar</h4>
-                          <span>MTech Computer Science @ ISI Kolkata</span>
-                        </div>
-                        <div class="social">
+                      <div class="portfolio-links">
                           <a href="https://twitter.com/LakkojuSiva"><i class="bi bi-twitter"></i></a>
                           <a href="https://github.com/sivakumarlakkoju"><i class="bi bi-github"></i></a>
                           <a href="https://www.linkedin.com/in/vsskl"><i class="bi bi-linkedin"></i></a>
+                      </div>
+                      <div class="portfolio-info">
+                        <div class="member-info-content">
+                          <h4>Siva Kumar</h4>
+                          <span style="color: white;">MTech Computer Science @ ISI Kolkata</span>
                         </div>
                       </div>
                     </div>
                   </div>
-        
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="member">
+
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                    <div class="portfolio-wrap">
                       <img src="assets/img/core_team/Nikunj.jpg" class="img-fluid" alt="">
-                      <div class="member-info">
-                        <div class="member-info-content">
-                          <h4>Nikunj Bansal</h4>
-                          <span>Data Scientist @ Cognizant, Researcher. Ex - MLOps @ Railofy</span>
-                        </div>
-                        <div class="social">
+                      <div class="portfolio-links">
                           <a href="https://twitter.com/Nikunjbansal991"><i class="bi bi-twitter"></i></a>
                           <a href="https://github.com/Nikunjbansal99"><i class="bi bi-github"></i></a>
                           <a href="https://www.linkedin.com/in/nikunjbansal99/"><i class="bi bi-linkedin"></i></a>
+                      </div>
+                      <div class="portfolio-info">
+                        <div class="member-info-content">
+                          <h4>Nikunj Bansal</h4>
+                          <span style="color: white;">Data Scientist @ Cognizant, Researcher. Ex - MLOps @ Railofy</span>
                         </div>
                       </div>
                     </div>
                   </div>
-        
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="member">
+
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                    <div class="portfolio-wrap">
                       <img src="assets/img/core_team/VyshnaviGutta.jpg" class="img-fluid" alt="">
-                      <div class="member-info">
-                        <div class="member-info-content">
-                          <h4>Vyshnavi Gutta</h4>
-                          <span>MSCS @ gatech, Ex - Data scientist @ Jio</span>
-                        </div>
-                        <div class="social">
+                      <div class="portfolio-links">
                           <a href="https://github.com/vyshnavigutta369"><i class="bi bi-github"></i></a>
                           <a href="https://www.linkedin.com/in/vyshnavi-gutta-308bab21b/"><i class="bi bi-linkedin"></i></a>
-                        </div>
                       </div>
-                    </div>
-                  </div>
-        
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="member">
-                      <img src="assets/img/core_team/Nithin Reddy.jpg" class="img-fluid" alt="">
-                      <div class="member-info">
+                      <div class="portfolio-info">
                         <div class="member-info-content">
-                          <h4>Nithin Reddy</h4>
-                          <span>Data Scientist @Quantum</span>
-                        </div>
-                        <div class="social">
-                          <a href="https://www.twitter.com/nithinreddyyy"><i class="bi bi-twitter"></i></a>
-                          <a href="https://github.com/nithinreddyy"><i class="bi bi-github"></i></a>
-                          <a href="https://www.linkedin.com/in/nithinreddyy/"><i class="bi bi-linkedin"></i></a>
+                          <h4>Vyshnavi Gutta</h4>
+                          <span style="color: white;">MSCS @ gatech, Ex - Data scientist @ Jio</span>
                         </div>
                       </div>
                     </div>
                   </div>
-                  
 
-                  
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="member">
-                      <img src="assets/img/core_team/Aryan_Lala.jpg" class="img-fluid" alt="">
-                      <div class="member-info">
-                        <div class="member-info-content">
-                          <h4>Aryan Lala</h4>
-                          <span>Software Developer @ IBM</span>
-                        </div>
-                        <div class="social">
-                          <a href="https://twitter.com/AryanLala20"><i class="bi bi-twitter"></i></a>
-                          <a href="https://github.com/aryanlala"><i class="bi bi-github"></i></a>
-                          <a href="https://www.linkedin.com/in/aryanlala/"><i class="bi bi-linkedin"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-        
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="member">
-                      <img src="assets/img/core_team/shankar.jpeg" class="img-fluid" alt="">
-                      <div class="member-info">
-                        <div class="member-info-content">
-                          <h4>Shankar</h4>
-                          <span>Research scholar IIT Kharagpur </span>
-                        </div>
-                        <div class="social">
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                    <div class="portfolio-wrap">
+                      <img src="assets/img/core_team/shankar.jpeg" class="img-fluid" alt="" height="385px" width="100%">
+                      <div class="portfolio-links">
                           <a href="https://twitter.com/shankargopal89?t=2edy9kcrrLCrAFQ86FBRUg&s=09"><i class="bi bi-twitter"></i></a>
                           <a href="https://github.com/Shankaranarayanan89"><i class="bi bi-github"></i></a>
                           <a href="https://www.linkedin.com/in/sankaranarayanan-gopalan-44ab0138"><i class="bi bi-linkedin"></i></a>
+                      </div>
+                      <div class="portfolio-info">
+                        <div class="member-info-content">
+                          <h4>Shankar</h4>
+                          <span style="color: white;">Research scholar IIT Kharagpur</span>
                         </div>
                       </div>
                     </div>
                   </div>
-        
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="member">
-                      <img src="assets/img/core_team/Aditya.jpg" class="img-fluid" alt="">
-                      <div class="member-info">
-                        <div class="member-info-content">
-                          <h4>Aditya</h4>
-                          <span>Predoc @ TCS Research , RA @ Robocomp , GSoC Mentor @ Robocomp</span>
-                        </div>
-                        <div class="social">
+
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                    <div class="portfolio-wrap">
+                      <img src="assets/img/core_team/Aditya.jpg" class="img" alt="" height="385px" width="100%">
+                      <div class="portfolio-links">
                           <a href="https://twitter.com/_AdityaKapoor_"><i class="bi bi-twitter"></i></a>
                           <a href="https://github.com/AdityaKapoor74"><i class="bi bi-github"></i></a>
                           <a href="https://www.linkedin.com/in/aditya-kapoor-446727152"><i class="bi bi-linkedin"></i></a>
-                        </div>
                       </div>
-                    </div>
-                  </div>
-        
-                  <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="member">
-                      <img src="assets/img/core_team/Dipanshu.png" class="img-fluid" alt="">
-                      <div class="member-info">
+                      <div class="portfolio-info">
                         <div class="member-info-content">
-                          <h4>Dipanshu</h4>
-                          <span>SWE @ PayPal, Ex - Research Intern @ IISc</span>
-                        </div>
-                        <div class="social">
-                          <a href="https://twitter.com/b_dipanshu12"><i class="bi bi-twitter"></i></a>
-                          <a href="https://github.com/bdip635"><i class="bi bi-github"></i></a>
-                          <a href="https://www.linkedin.com/in/dipanshu-barnwal/"><i class="bi bi-linkedin"></i></a>
+                          <h4>Aditya</h4>
+                          <span style="color: white;">Predoc @ TCS Research , RA @ Robocomp , GSoC Mentor @ Robocomp</span>
                         </div>
                       </div>
                     </div>
                   </div>
-        
                   
                 </div>
-        
+            
               </div>
-            </section><!-- End Team Section -->
+            </section>
 
   </main><!-- End #main -->
 
