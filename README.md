@@ -25,7 +25,7 @@ Please head over to the issues tab to get started with contributing to the websi
 ### **Phase 1**
 
 1. [ ] Add a CORD.ai icon.
-2. [ ] Add the required names, credentials and socials links of each of the core team members. 
+2. [x] Add the required names, credentials and socials links of each of the core team members. 
 3. [ ] Add new projects and group them based on `projects`, `blogs` and `sessions`. 
 4. [ ] Have a initial backend by changing the PHP files to enable the mailing services. 
 5. [ ] Adding a form in the `join community` button that will redirect to slack community once form submitted successfully. 
