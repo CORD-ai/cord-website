@@ -102,15 +102,20 @@ h6,
 }
 
 #header .logo img {
-  padding: 0;
-  margin: 0;
-  max-height: 40px;
+  padding: 5px;
+  max-height: 72px;
+  width: 200px;
+  display: flex;
 }
 
 #main {
   margin-top: 72px;
 }
 
+#cordimg {
+  max-height:100%; 
+  max-width:100%;
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
