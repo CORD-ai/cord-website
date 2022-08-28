@@ -8,12 +8,12 @@ This is the official website of CORD.ai. Please contribute to the website by sol
 
 Please head over to the issues tab to get started with contributing to the website. This is how we expect you to contribute to the website.
 
-1. Fork the website.
+1. Clone the website.
 2. Go to the issues tab and take one issue at a time and discuss that issue with the repo maintainers. 
-3. Maintainers will be assigning that issues to you. 
+3. Maintainers will be assigning those issues to you. 
 4. Clone the repo and create your branch. The format must be `<your Name>/<feature name>`. For e.g. Suppose a person named Sam is trying to create dark mode to the website then the branch name must be: `Sam/Website-darkmode`. 
 
-5. Commit your changes. We have hosted our website in netlify. So once your PR gets merged to our main branch, you will be seeing the changes to the main site. Netlify automatically has its own CI/CD pipeline. So no need to worry about deployement stuffs. 
+5. Commit your changes. We have hosted our website in netlify. So once your PR gets merged to our main branch, you will be seeing the changes to the main site. Netlify automatically has its own CI/CD pipeline. So no need to worry about the deployment. 
 
 ---
 
