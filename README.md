@@ -27,11 +27,16 @@ Please head over to the issues tab to get started with contributing to the websi
 1. [x] Add a CORD.ai icon.
 2. [x] Add the required names, credentials and socials links of each of the core team members. 
 3. [ ] Add new projects and group them based on `projects`, `blogs` and `sessions`. 
-4. [ ] Have a initial backend by changing the PHP files to enable the mailing services. 
+4. [x] Have a initial maling services done using EmailJS.
 5. [x] Adding a form in the `join community` button that will redirect to slack community once form submitted successfully. 
+6. [x] Deployed the initial repo to Netlify with custom domain. 
 
 ### **Phase 2**
 
 1. [ ] Solve the left over issues. 
 2. [ ] Completely change the backend to either `jekyll` or `react`.
 3. [ ] Have a proper database of the members and the works that have been done on the community. 
+4. [ ] Smoothen the experience of users with front end and backend changes. (Specific issues to be added soon.)
+
+---
+
