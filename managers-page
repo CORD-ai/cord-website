@@ -191,72 +191,7 @@
                     </div>
                   </div>
 
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
-                    <div class="portfolio-wrap">
-                      <img src="assets/img/managers photo/Neel - Profile Images.jpeg" class="img-fluid" alt="">
-                      <div class="portfolio-links">
-                          <a href="https://github.com/neelraval13"><i class="bi bi-github"></i></a>
-                          <a href="https://twitter.com/foodiedev_py"><i class="bi bi-twitter"></i></a>
-                          <a href="https://www.linkedin.com/in/neel-raval/"><i class="bi bi-linkedin"></i></a>
-                      </div>
-                      <div class="portfolio-info">
-                        <div class="member-info-content">
-                          <h4>Neel Raval</h4>
-                          <span style="color: white;">Web Development, Blockchain, Web 3, Crypto</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
-                    <div class="portfolio-wrap">
-                      <img src="assets/img/managers photo/Jaithra Varma.jpeg" class="img-fluid" alt="">
-                      <div class="portfolio-links">
-                          
-                          <a href="https://www.linkedin.com/in/jaithra-m-2b8013200"><i class="bi bi-linkedin"></i></a>
-                      </div>
-                      <div class="portfolio-info">
-                        <div class="member-info-content">
-                          <h4>Jaithra Varma</h4>
-                          <span style="color: white;">Computer Vision, Reinforcement Learning</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
-                    <div class="portfolio-wrap">
-                      <img src="assets/img/managers photo/Khushi Saxena.jpeg" class="img-fluid" alt="">
-                      <div class="portfolio-links">
-                          <a href="https://github.com/Khushi0321"><i class="bi bi-github"></i></a>
-                          <a href="https://www.twitter.com/khushi_321"><i class="bi bi-twitter"></i></a>
-                          <a href="https://www.linkedin.com/in/khushi321"><i class="bi bi-linkedin"></i></a>
-                      </div>
-                      <div class="portfolio-info">
-                        <div class="member-info-content">
-                          <h4>Khushi Saxena</h4>
-                          <span style="color: white;">Web Development,NLP,Machine learning</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
                   
-
-                  
-
-                  
-
-                  
-
-                  
-
-                  
-
-                  
-
-
-                 
                 </div>
             
               </div>
