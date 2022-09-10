@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>CORD.ai Teams</title>
+  <title>Hackathon</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -1120,7 +1120,7 @@
 									<div class="p-3 partners-pics mt-n2 text-center">
 										
 										<div class="d-inline-block">
-											<img src="assets/img/hackathon/cordailogo.png" alt="CORD.ai LOGO"  width="40%" height="30%">
+											<img src="assets/img/hackathon/cordailogo.png" alt="CORD.ai LOGO"  width="100%" height="100%">
 										</div>
 										
 									</div>
@@ -1316,6 +1316,159 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+    
+
+    <script async="">
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+        var myVar;
+        (function () {
+            var cssCode = $('#themeOfHack').html();
+            document.getElementById('coverImage').style.backgroundImage = "url(" + $('#coverImageUrl').html() + ")";
+            if (cssCode.indexOf('#') >= 0) {
+                document.documentElement.style.setProperty('--primary-color', $('#themeOfHack').html());
+            }
+            $('.imagePlaceholder').hide();
+            $('.myMainContent').show();
+        })();
+    </script>
+
+    <script>
+        var mySwiper = new Swiper('.challenge-1', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            dynamicBullets: true,
+            pagination: {
+                el: '.swiper-pagination-challenge-1',
+                dynamicBullets: true,
+                clickable: true,
+            }
+        })
+        var mySwiper = new Swiper('.challenge-2', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            dynamicBullets: true,
+            breakpoints: {
+                0: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 30,
+                    slidesPerView: 1,
+                    loop: false,
+                },
+                575: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 30,
+                    loop: true
+                },
+            },
+            pagination: {
+                el: '.swiper-pagination-challenge-2',
+                clickable: true,
+            }
+        })
+        var mySwiper = new Swiper('.swiper-prize', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+            slidesPerView: 2,
+            spaceBetween: 30,
+            dynamicBullets: true,
+            breakpoints: {
+                0: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 30,
+                    slidesPerView: 1,
+                    loop: false,
+                },
+                575: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 30,
+                    loop: true
+                },
+            },
+            pagination: {
+                el: '.swiper-pagination-prize',
+                clickable: true,
+            }
+        })
+    </script>
+
+    <script>
+        var mySwiper = new Swiper('.swiper-mentor-1', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+            slidesPerView: 2,
+            spaceBetween: 30,
+            dynamicBullets: true,
+            breakpoints: {
+                0: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 30,
+                    slidesPerView: 1,
+                    loop: false,
+                },
+                575: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 30,
+                    loop: true
+                },
+            },
+            pagination: {
+                el: '.swiper-pagination-mentor-1',
+                clickable: true,
+            }
+        })
+        var mySwiper = new Swiper('.swiper-mentor-2', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+            slidesPerView: 2,
+            spaceBetween: 30,
+            dynamicBullets: true,
+            breakpoints: {
+                0: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 30,
+                    slidesPerView: 1,
+                    loop: false,
+                },
+                575: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 30,
+                    loop: true
+                },
+            },
+            pagination: {
+                el: '.swiper-pagination-mentor-2',
+                clickable: true,
+            }
+        })
+        var mySwiper = new Swiper('.swiper-judge', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+            slidesPerView: 2,
+            spaceBetween: 30,
+            dynamicBullets: true,
+            pagination: {
+                el: '.swiper-pagination-judge',
+                clickable: true,
+            }
+        })
+    </script>
 
 </body>
 
