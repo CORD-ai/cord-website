@@ -1393,3 +1393,11 @@ section {
     padding: 3px 0;
   }
 }
+
+/* Constraint the logo size */
+
+@media only screen and ((max-width: 300px) or (max-height: 300px)) {
+  #cordimg {
+    display: none;
+  }
+}
