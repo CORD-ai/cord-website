@@ -9,9 +9,21 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
-  color: #212529;
+font-family: 'Montserrat', sans-serif ;
+background-color: #000;
+color: #fff;
+  
+
 }
+#hero { 
+  background: url(/backgroundGif.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ 
+}
+
 
 a {
   color: #eb5d1e;
@@ -30,7 +42,7 @@ h4,
 h5,
 h6,
 .font-primary {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Montserrat', sans-serif !important; 
 }
 
 /*--------------------------------------------------------------
@@ -83,12 +95,15 @@ h6,
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: #fff;
+  background: #000;
+  color: whitesmoke;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 #header .logo h1 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
+  font-weight: 500;
   margin: 0;
   line-height: 1;
   font-weight: 400;
@@ -97,7 +112,7 @@ h6,
 
 #header .logo h1 a,
 #header .logo h1 a:hover {
-  color: #7a6960;
+  color: whitesmoke;
   text-decoration: none;
 }
 
@@ -116,6 +131,8 @@ h6,
 #cordimg {
   max-height:90%; 
   max-width:100%;
+  opacity: 1;
+  border-radius:  48%;
 }
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -125,6 +142,7 @@ h6,
 */
 .navbar {
   padding: 0;
+  opacity: 1;
 }
 
 .navbar ul {
@@ -146,7 +164,7 @@ h6,
   justify-content: space-between;
   padding: 10px 0 10px 30px;
   font-size: 15px;
-  color: #4e4039;
+  /* color: #4e4039; */
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -162,22 +180,24 @@ h6,
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #eb5d1e;
+  color: #c813ff;
 }
 
 .navbar .getstarted,
 .navbar .getstarted:focus {
-  background: #eb5d1e;
-  color: #fff;
-  padding: 10px 25px;
+  /* background: #eb5d1e; */
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 5px 15px;
   margin-left: 30px;
-  border-radius: 50px;
+  /* border-radius: 50px; */
 }
 
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
-  color: #fff;
-  background: #ee7843;
+  color: #000;
+  background: #ffffff;
+  transition: 0.2s ease-in;
 }
 
 .navbar .dropdown ul {
@@ -355,27 +375,41 @@ h6,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
 #hero {
   width: 100%;
-  height: 70vh;
-  background: #fef8f5;
+  height: 100vh;
+  /* background: #fff; */
+  
   border-bottom: 2px solid #fcebe3;
   margin: 72px 0 -72px 0;
 }
 
 #hero h1 {
+
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 56px;
-  color: #4e4039;
+  font-size: 4rem;
+  justify-content:stretch;
+  font-weight: 300;
+  line-height: 70px;
+  color: #ffffff;
+  text-size-adjust:inherit ;
+  display: block !important;
+  
 }
 
+
 #hero h2 {
-  color: #a08f86;
+  color: #ffffff;
   margin: 15px 0 0 0;
   font-size: 24px;
+  /* position: relative;
+  left: 50%;
+  text-align: center; */
+ 
 }
+
 
 #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
@@ -384,15 +418,19 @@ h6,
   letter-spacing: 1px;
   display: inline-block;
   padding: 8px 28px;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   transition: 0.5s;
   margin-top: 30px;
-  color: #fff;
-  background: #eb5d1e;
+  color: #ffffff;
+  border:1px solid #ffffff; 
+  left: 78%;
+  
+  /* background: #eb5d1e; */
 }
 
 #hero .btn-get-started:hover {
-  background: #ef7f4d;
+  background: #363636;
+  color: white;
 }
 
 #hero .animated {
@@ -475,7 +513,7 @@ section {
 }
 
 .section-bg {
-  background-color: #fef8f5;
+  background-color: #fff;
 }
 
 .section-title {
@@ -489,7 +527,7 @@ section {
   padding-bottom: 0;
   line-height: 1px;
   margin-bottom: 15px;
-  color: #c2b7b1;
+  color: #fff;
 }
 
 .section-title p {
@@ -498,7 +536,7 @@ section {
   position: relative;
   font-size: 32px;
   font-weight: 700;
-  color: #4e4039;
+  color: #fff;
 }
 
 .section-title p::after {
@@ -507,7 +545,7 @@ section {
   display: block;
   width: 60px;
   height: 2px;
-  background: #eb5d1e;
+  background: #000;
   bottom: 0;
   left: calc(50% - 30px);
 }
@@ -563,30 +601,36 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about{
+  background: #000;
+}
 .about h3 {
   font-weight: 700;
   font-size: 34px;
-  color: #4e4039;
+  color: #ffffff;
 }
 
 .about h4 {
   font-size: 20px;
   font-weight: 700;
   margin-top: 5px;
-  color: #7a6960;
+  color: #ffffff;
 }
 
 .about i {
   font-size: 48px;
   margin-top: 15px;
-  color: #f39e7a;
+  color: #ffffff;
 }
 
 .about p {
   font-size: 15px;
   color: #5a6570;
 }
-
+.img-fluid{
+  color: #fff;
+  filter: hue-rotate();
+}
 @media (max-width: 991px) {
   .about .about-img img {
     max-width: 70%;
@@ -602,29 +646,44 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.services{
+  background: #000;
+}
+
+/*Multi shade cards */
+:root {
+  --light-purple: #B19CD9;
+  --light-pink: #F2B0C2;
+  --light-red: #F9B1A4;
+}
+
+
 .services .icon-box {
   padding: 30px;
   position: relative;
   overflow: hidden;
   margin: 0 0 40px 0;
-  background: #fff;
+  background: rgb(243, 151, 255);
   box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
   transition: all 0.3s ease-in-out;
-  border-radius: 15px;
+  /* border-radius: 15px; */
+  background: linear-gradient(to right, var(--light-purple), var(--light-pink), var(--light-red));
+
   text-align: center;
   border-bottom: 3px solid #fff;
 }
 
 .services .icon-box:hover {
   transform: translateY(-5px);
-  border-color: #ef7f4d;
+  box-shadow:  15px 30px #f8c6ff;
 }
 
 .services .icon i {
   font-size: 48px;
   line-height: 1;
   margin-bottom: 15px;
-  color: #ef7f4d;
+  color: #000;
+ 
 }
 
 .services .title {
@@ -848,6 +907,7 @@ section {
 --------------------------------------------------------------*/
 .faq {
   padding: 60px 0;
+  background: #000;
 }
 
 .faq .faq-list {
@@ -864,7 +924,7 @@ section {
 .faq .faq-list .question {
   display: block;
   position: relative;
-  font-family: #eb5d1e;
+  /* font-family: #eb5d1e; */
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -892,21 +952,23 @@ section {
 }
 
 .faq .faq-list .collapsed {
-  color: #343a40;
+  color: #fff;
 }
 
 .faq .faq-list .collapsed:hover {
-  color: #eb5d1e;
+  color: #b81eeb;
 }
 
 .faq .faq-list .collapsed .icon-show {
   display: inline-block;
   transition: 0.6s;
+
 }
 
 .faq .faq-list .collapsed .icon-close {
   display: none;
   transition: 0.6s;
+
 }
 
 /*--------------------------------------------------------------
@@ -1032,6 +1094,9 @@ section {
 /*--------------------------------------------------------------
 # Contact Us
 --------------------------------------------------------------*/
+#contact{
+  background: #000;
+}
 .contact .info {
   border-top: 3px solid #eb5d1e;
   border-bottom: 3px solid #eb5d1e;
@@ -1039,6 +1104,27 @@ section {
   background: #fff;
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+.btn-primary{
+  font-family: "Montserrat  ", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  /* border-radius: 3px; */
+  transition: 0.5s;
+  margin-top: 30px;
+  background-color  : #ffffff;
+  color: #000;
+  left: 78%;
+  border-radius:10px;
+  padding: 15px 90px;
+  
+}
+.btn-primary:hover{
+  box-shadow: 10px 20px #ff6792;
+  
 }
 
 .contact .info i {
@@ -1211,17 +1297,18 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+
 #footer {
-  background: #fff;
   padding: 0 0 30px 0;
-  color: #212529;
+  color: #fff;
   font-size: 14px;
-  background: #fef8f5;
+  background: #000;
 }
 
 #footer .footer-newsletter {
+
   padding: 50px 0;
-  background: #fef8f5;
+  background: #000;
   text-align: center;
   font-size: 15px;
 }
@@ -1232,7 +1319,7 @@ section {
   padding: 0;
   line-height: 1;
   font-weight: 600;
-  color: #4e4039;
+  color:#ffffff;
 }
 
 #footer .footer-newsletter form {
@@ -1240,9 +1327,10 @@ section {
   background: #fff;
   padding: 6px 10px;
   position: relative;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   text-align: left;
+  
 }
 
 #footer .footer-newsletter form input[type=email] {
@@ -1263,7 +1351,7 @@ section {
   background: #eb5d1e;
   color: #fff;
   transition: 0.3s;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -1273,11 +1361,12 @@ section {
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #fff;
+  background: #000;
 }
 
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
+  
 }
 
 #footer .footer-top .footer-contact h4 {
@@ -1293,13 +1382,13 @@ section {
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Raleway", sans-serif;
-  color: #5c5c5c;
+  color: #fff;
 }
 
 #footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #212529;
+  color: #fff;
   position: relative;
   padding-bottom: 12px;
 }
@@ -1316,7 +1405,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #f39e7a;
+  color: #fff;
   font-size: 18px;
   line-height: 1;
 }
@@ -1332,7 +1421,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a {
-  color: #5c5c5c;
+  color: #b8b6b6e7;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -1340,14 +1429,14 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #eb5d1e;
+  color: #d99ceb;
 }
 
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #eb5d1e;
-  color: #fff;
+  background: #fff;
+  color: #000;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -1359,7 +1448,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #ef7f4d;
+  background: #d99ceb;
   color: #fff;
   text-decoration: none;
 }
