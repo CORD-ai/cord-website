@@ -45,17 +45,20 @@
         <!-- <h1 class="text-light"><a href="index.html"><span>CORD.ai</span></a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a><img id = "cordimg" src="assets/img/icon/Logo Medium.png" alt="cordai-logo" class="img-fluid"></a> -->
-        <h1 class="text-light"><a><img id = "cordimg" src="assets/img/icon/Logo Medium.png" alt="cordai-logo" class="img-fluid"> CORD.ai </a></h1>
+        <h1 class="text-light"><a><img id = "cordimg" src="assets/img/icon/Logo_Medium.png" alt="cordai-logo" class="img-fluid"> CORD.ai </a></h1>
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="projects.html">Our work</a></li>
-          <li><a class="nav-link scrollto active" href="teams.html">Team</a></li>
-          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="https://t.co/I9bSrPCA1x">Join our community</a></li>
+          <ul>
+            <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+            <li><a class="nav-link scrollto" href="index.html#about">About Us</a></li>
+            <li><a class="nav-link scrollto" href="projects.html">Our work</a></li>
+            <li><a class="nav-link scrollto active" href="teams.html">Team</a></li>
+            <li><a href="blogs.html" class="nav-link scrollto">Blogs</a></li>
+            <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+            <li><a class="getstarted scrollto" href='screening_task.html'>Screening Task</a></li>
+          </ul>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -66,6 +69,7 @@
   <main id="main">
 
             <section id="portfolio" class="portfolio">
+            
               <div class="container" data-aos="fade-up">
             
                 <div class="section-title">
@@ -74,19 +78,35 @@
                 </div>
             
                 <!-- Team members are grouped based on the data-filter value. Paste the data-filters value in the div container each member for the grouping -->
+                
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
                   <div class="col-lg-12">
                     <ul id="portfolio-flters">
-                      <li data-filter="*" class="filter-active">All</li>
-                      <li data-filter=".filter-core-team">Core Team</li>
-                      <li data-filter=".filter-managers">Community Managers</li>
-                      <li data-filter=".filter-contributors">Contributors</li>
+                      <li data-filter="*" class="filter-active team_all"  value="0">All</li>
+                      <li data-filter=".filter-core-team " id="research_advisors"  value="1">Research Advisors</li>
+                      <li data-filter=".filter-managers" id="mentors" value="2">Mentors</li>
+                      <li data-filter=".filter-contributors" value="3">Other Members</li>
+                       <div>
+                    </div>
                     </ul>
+                   
                   </div>
+                 
                 </div>
-            
-
-                <div class="row portfolio-container justify-content-center" data-aos="fade-up" data-aos-delay="200">
+              <div class="container">
+                <!-- Profile Container -->
+                <div id="profile-container" class="row">
+                 
+                </div>
+              </div>
+              <!--Mentors list--------->
+            <div class="container">
+              <div class="row membersRow" id="mentor-section">
+                
+              </div>
+            </div>
+              </div>
+                <div class="row portfolio-container justify-content-center team_container" data-aos="fade-up" data-aos-delay="200">
             
                   <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
                     <div class="portfolio-wrap">
@@ -97,6 +117,7 @@
                           <a href="https://twitter.com/bose_aneesh"><i class="bi bi-twitter"></i></a>
                           <a href="https://www.linkedin.com/in/aneesh-bose-at-acm"><i class="bi bi-linkedin"></i></a>
                       </div>
+                      
                       <div class="portfolio-info  pb-3">
                         <div class="member-info-content">
                           <h4>Aneesh Bose</h4>
@@ -338,9 +359,12 @@
                 </div>
               </div>
             </section>
+            
+            
             <div class="section-title">
-                    <h2>Community Managers</h2>
-                  </div>
+              <h2>Community Managers</h2>
+            </div>
+            <section class=" community_container">
                   <section id="portfolio" class="portfolio">
                     <div class="container" data-aos="fade-up">
                 
@@ -455,7 +479,7 @@
                     </div>
                   </section>
 
-                  
+                </section>
 
   </main><!-- End #main -->
 
