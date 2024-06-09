@@ -12,8 +12,9 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <style>
     body{
-        background-color: #F0EBE3 !important;
-       
+        
+background-image: linear-gradient(to left top, #ffffff, #fdfdff, #fbfbff, #f8faff, #f5f8ff, #f5f6fe, #f6f3fd, #f7f1fb, #fceef5, #feebec, #fceae4, #f6eadd) !important;
+       font-size: 1.2rem;
     }
     p{
         font-weight: 500;
@@ -33,6 +34,17 @@
     }
     .row-2{
          color: rgb(252, 249, 249);
+    }
+    .component-1{
+        background-color: #BEFFC7;
+    }
+    .component-2{
+        
+background-color: #F3FFBF;
+    }
+    .component-1,.component-2{
+        border-radius: 10px;
+        margin-bottom:200px;
     }
    
 </style>
@@ -70,7 +82,7 @@
    <div class="container my-3">
     <div class="row">
         <div class="col ">
-            <h1 class="screening-heading bg-light">Screening Task</h1>
+            <h1 class="screening-heading ">Screening Task</h1>
             <h3>Welcome to the screening tasks for CORD.ai projects!</h3>
             <div class="screening-description">
                     <p class="p-2">We have formulated several project ideas, and if you are inclined to participate in our projects or wish to initiate
@@ -87,8 +99,8 @@
         </div>
     </div>
     <div class="row row-2 ">
-        <div class="col-6 pt-4 bg-primary component-1 ">
-            <h1>For Research Projects</h1>
+        <div class="col-6 pt-4 text-dark component-1 ">
+            <h1 class="fw-bolder">For Research Projects</h1>
             <ol class="p-4">
                 <li>Coding skills:</li>
                 <p>👉 Choose and implement any 2 kaggle task of your interest and be-ready to explain what you implemented and unique (if
@@ -101,8 +113,8 @@
                 this task.</p>
             </ol>
         </div>
-        <div class="col-6 pt-4 bg-warning  ">
-            <h1>For Open Source/ Non-Research Projects</h1>
+        <div class="col-6 pt-4 text-dark  component-2">
+            <h1 class="fw-bolder">For Open Source/ Non-Research Projects</h1>
             <p class="p-1">Kindly mail your kaggle/github link. You can show any ML project that you've deployed end to end.</p>
             <p class="p-1">Referrals and certificates will be conferred based on your contributions, provided the project lacks association with
             other laboratories or entities</p>
@@ -111,7 +123,84 @@
     </div>
    </div>
 
+<!-- ======= Footer ======= -->
+<footer id="footer">
 
+    <div class="footer-newsletter">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 news-letter">
+                    <h4>Join Our Newsletter</h4>
+                    <p>Get updates on blogs, published paper, posts and sessions.</p>
+
+                    <!-- TODO: METHOD TO BE DONE -->
+                    <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>CORD.ai</h3>
+                    <p>
+                        Pune, Maharashtra<br>
+                        India, IN 411046<br><br><br>
+                        <strong>Email:</strong> social.cordai@gmail.com<br>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="index.html#about">About us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="projects.html">Our work</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="teams.html">Team</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Work</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">AI research</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Projects</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Blogs</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Reading sessions</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Social Networks</h4>
+                    <p>Follow us on our socials to get daily updates from our community.</p>
+                    <div class="social-links mt-3">
+                        <a href="https://www.linkedin.com/company/cord-ai1/" class="linkedin"><i
+                                class="bx bxl-linkedin"></i></a>
+                        <a href="https://twitter.com/CRforAi" class="twitter"><i class="bx bxl-twitter"></i></a>
+                        <a href="https://github.com/CORD-ai" class="github"><i class="bx bxl-github"></i></a>
+                        <a href="https://www.facebook.com/CRforAi" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="https://www.youtube.com/channel/UCMr-bQG5XKLPOR5nhJZbQ5Q" class="youtube"><i
+                                class="bx bxl-youtube"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4">
+        <div class="copyright">
+            &copy; Copyright <strong><span>CORD.ai</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+        </div>
+    </div>
+</footer><!-- End Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>

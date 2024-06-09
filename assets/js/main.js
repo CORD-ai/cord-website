@@ -12,6 +12,7 @@
   
   "use strict";
   
+  
   /**
    * Easy selector helper function
    */
@@ -281,9 +282,12 @@
 //   floatingText.style.backgroundImage = `linear-gradient(to right, ${color1}, ${color2}, ${color3})`;
 //   requestAnimationFrame(updateGradient);
 // }
+
+
+ 
 //===============================Mentors===============================================
 const mentorsList = [
-  //  {img:'assets/img/research_advisors/3.jpeg',
+  //  {img:'assets/img/research_advisors/3.jpeg', 
   //   MemberName: "Ashish Vashist",
   //   Position: "Research Intern @ CMU",
   //   ResearchInterests: "Computer Vision",
@@ -873,7 +877,13 @@ var intervalId = setInterval(function() {
 }, 10); 
 }
 
-
+   var animation = lottie.loadAnimation({
+        container: document.getElementById('lottie-container'), // the dom element that will contain the animation
+        renderer: 'svg', // 'svg', 'canvas', or 'html'
+        loop: true, // whether the animation should loop
+        autoplay: true, // whether the animation should start automatically
+        path: 'assets/img/animation.json' // the path to the animation json
+    });
 
 
 

@@ -29,9 +29,10 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
 
   <!-- =======================================================
   * Template Name: Ninestars - v4.8.0
@@ -44,11 +45,11 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
+  <header id="header" class="fixed-top  d-flex align-items-center">
 
-    <div class="container d-flex align-items-center justify-content-between">
+    <div class="container d-flex align-items-center m-0 justify-content-between">
 
-      <div class="logo">
+      <div class="logo m-0">
         <!-- <h1 class="text-light"><a href="index.html"><span>CORD.ai</span></a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a><img id = "cordimg" src="assets/img/icon/Logo Medium.png" alt="cordai-logo" class="img-fluid"></a> -->
@@ -56,8 +57,8 @@
               class="img-fluid"> CORD.ai </a></h1>
       </div>
 
-      <nav id="navbar" class="navbar">
-        <ul>
+      <nav id="navbar" class="navbar text-dark" >
+        <ul >
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">About Us</a></li>
           <li><a class="nav-link scrollto" href="projects.html">Our work</a></li>
@@ -91,34 +92,32 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-
-    <div class="container">
-      <div class="row gy-4">
-        <h1 class="gradient-text floating-text" id="floatingText">A Collaborative Open Research in Deep Learning</h1>
-        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-
-          <h2>An Inclusive AI research community for all. </h2>
-          <div>
-            <a href="https://t.co/I9bSrPCA1x" class="btn-get-started scrollto">Join our community</a>
-          </div>
+  <section id="hero" class="d-flex align-items-center text-dark">
+  
+    <div class="container px-0 m-5">
+      <div class="row align-items-center px-0"> 
+        <div class="col-lg-6 col-md-6 mb-4 mb-lg-0 px-0">
+          <h1 class="gradient-text floating-text" id="floatingText">A Collaborative Open Research in Deep Learning</h1>
+          <p>An Inclusive AI research community for all.</p>
+          <a href="https://t.co/I9bSrPCA1x" class="btn-get-started scrollto btn btn-primary">Join our community</a>
         </div>
-        <!-- <div class="col-lg-6 order-1 order-lg-2 hero-img">
-          <img src="assets/img/hero-img.svg" class="img-fluid animated" alt="">
-        </div> -->
+        <div class="col-lg-6 col-md-6 m-0 p-0" id="lottie-container">
+          <!-- Lottie container or image here -->
+        </div>
       </div>
     </div>
-
-  </section><!-- End Hero -->
+  
+  </section>
+  <!-- End Hero -->
   <div id="advertisement-container"></div>
 
-  <main id="main">
+  <main id="main" class="text-dark">
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about ">
       <div class="container">
 
         <div class="row justify-content-between">
-          <div class="col-lg-5 d-flex align-items-center justify-content-center about-img">
+          <div class="col-lg-5  d-flex align-items-center justify-content-center about-img">
             <img src="assets/img/about-img.svg" class="img-fluid" alt="" data-aos="zoom-in">
           </div>
           <div class="col-lg-6 pt-5 pt-lg-0">
@@ -357,7 +356,7 @@
                   <textarea class="form-control" id="message" name="message" rows="5"></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary ">Submit</button>
+                <button type="submit" class="btn btn-dark btn-lg ">Submit</button>
               </form>
             </div>
           </div>
@@ -416,9 +415,9 @@
     <div class="footer-newsletter">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Get updates on blogs, published paper, posts and sessions.</p>
+          <div class="col-lg-6 news-letter">
+            <h4 class="text-light">Join Our Newsletter</h4>
+            <p class="text-light">Get updates on blogs, published paper, posts and sessions.</p>
 
             <!-- TODO: METHOD TO BE DONE -->
             <form action="" method="post">
@@ -434,7 +433,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>CORD.ai</h3>
+            <h4>CORD.ai</h4>
             <p>
               Pune, Maharashtra<br>
               India, IN 411046<br><br><br>
