@@ -882,8 +882,40 @@ var intervalId = setInterval(function() {
         renderer: 'svg', // 'svg', 'canvas', or 'html'
         loop: true, // whether the animation should loop
         autoplay: true, // whether the animation should start automatically
-        path: 'assets/img/animation.json' // the path to the animation json
+        path: 'assets/img/aiBall.json' // the path to the animation json
     });
+
+   var animation2 = lottie.loadAnimation({
+        container: document.querySelector('.about-img'), // the dom element that will contain the animation
+        renderer: 'svg', // 'svg', 'canvas', or 'html'
+        loop: true, // whether the animation should loop
+        autoplay: true, // whether the animation should start automatically
+        path: 'assets/img/animation.json' // the path to the animation json
+   });
+    
+     var animation3 = lottie.loadAnimation({
+        container: document.getElementById('icon-1'), // the dom element that will contain the animation
+        renderer: 'svg', // 'svg', 'canvas', or 'html'
+        loop: true, // whether the animation should loop
+        autoplay: true, // whether the animation should start automatically
+        path: 'assets/img/projects.json' // the path to the animation json
+    });
+
+   var animation4 = lottie.loadAnimation({
+        container: document.getElementById('icon-2'), // the dom element that will contain the animation
+        renderer: 'svg', // 'svg', 'canvas', or 'html'
+        loop: true, // whether the animation should loop
+        autoplay: true, // whether the animation should start automatically
+        path: 'assets/img/blogs.json' // the path to the animation json
+   });
+      var animation5 = lottie.loadAnimation({
+        container: document.getElementById('icon-3'), // the dom element that will contain the animation
+        renderer: 'svg', // 'svg', 'canvas', or 'html'
+        loop: true, // whether the animation should loop
+        autoplay: true, // whether the animation should start automatically
+        path: 'assets/img/reading-groups.json' // the path to the animation json
+    });
+
 
 
 

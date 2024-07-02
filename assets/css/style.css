@@ -29,6 +29,7 @@ background-size: contain;
 #profile-container, #mentor-section, #other-member-container{
   display: none;
 }
+
 .new_card_img{
   height: 15rem;  
 } 
@@ -39,11 +40,13 @@ background-size: contain;
   
 }
 .new_card{
-  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(0, 0, 0); */
   /* border:0.5px solid white; */
+  border: none;
+    /* box-shadow: 2px 2px 2px rgba(57, 56, 56, 0.466); */
 }
 .new_card:hover{
-  border: 2px solid rgb(255, 255, 255);
+  /* border: 2px solid rgb(255, 255, 255); */
   box-shadow: 20px 20px 10px  rgba(57, 56, 56, 0.466);
   transition: 0.5s ease-in-out;
   
@@ -131,6 +134,10 @@ h6,
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+  #footer .footer-newsletter{
+  margin-top: 100px !important;
+  }
+ 
 }
 
 /*--------------------------------------------------------------
@@ -335,6 +342,9 @@ h6,
 }
 
 @media (max-width: 991px) {
+  #footer .footer-newsletter {
+      margin-top: 150px !important;
+    }
   .mobile-nav-toggle {
     display: block;
   }
@@ -429,7 +439,10 @@ h6,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-
+.bold-text {
+  font-size: 2.7rem !important;
+  font-weight: 600;
+}
 #hero {
   width: 100%;
   height: 100vh;
@@ -466,13 +479,13 @@ h6,
   -webkit-background-clip: text;
   
   color: black;
-} */
+} */  
 
 
 #hero h2 {
   color: #212121;
   margin: 15px 0 0 0;
-  font-size: 1rem;
+  /* font-size: 3vw !important; */
   /* position: relative;
   left: 53%;  
  justify-content: center; */
@@ -520,7 +533,7 @@ h6,
 
   }
   #hero h2 {
-    font-size: 18px;
+    font-size: 2rem !important;
     line-height: 24px;
     position: relative;
     left: 20%;
@@ -556,13 +569,18 @@ right: ;
     font-size: 8px;
 /* text-align: center; */
   }
+  #hero{
+      padding-top: 15vh;
+  }
 
      .team-nav,
      #portfolio-flters {
        margin: 2% 0% !important;
      }
   #hero h1 {
-    font-weight: 300;
+    
+    font-weight: 600;
+    font-size: 6rem;
     line-height: 46px;
     justify-content: center;
     word-spacing: 5px;
@@ -571,7 +589,7 @@ right: ;
   }
 
   #hero h2 {
-    font-size: 12px;
+    /* font-size: 2rem !important; */
     line-height: 24px;
     position: relative;
     left: 0%;
@@ -582,9 +600,10 @@ right: ;
 #hero .btn-get-started{
   font-size: 1.7rem;
   position: relative;
-  left: 0%;
+  left: -4%;
   margin-top: 30px;
   margin-left: 30px;
+  margin-bottom: 0px !important;
 }
   #hero .hero-img img {
     width: 70%;
@@ -592,7 +611,9 @@ right: ;
 }
 
 @media (max-width: 575px) {
-  
+ #footer .footer-newsletter{
+  margin-top: 100px !important;
+  }
  .new_card{
   height: 100% !important;
   margin-bottom: 15px;
@@ -607,22 +628,24 @@ right: ;
   #hero .hero-img img {
     width: 80%;
   }
-  #hero{
-    height: 75vh;
+ 
+  #hero h1{
+    margin-top: 5rem;
+    font-size: 5rem;
+    font-weight: 600;
   }
   #hero h2{
     margin-bottom: 70px
     
   }
-  #hero .btn-get-started{
-    margin-bottom: 100px;
-  }
- .mobile-img{
-  display: none;
- }
+
+
 }
 
 @media (max-height: 600px) {
+  #footer .footer-newsletter {
+      margin-top: 100px !important;
+    }
   .new_card {
       height: 100% !important;
       margin-bottom: 15px;
@@ -1282,6 +1305,7 @@ background-image: linear-gradient(to left top, #ffffff, #faf7ff, #f8eeff, #f7e5f
 # Contact Us
 --------------------------------------------------------------*/
 #contact{
+  
   /* background: #000; */
   /* background-image: linear-gradient(to right top, #ffffff, #fbfafe, #f7f5fe, #f3effd, #efeafc); */
   background-image: linear-gradient(to right bottom, #f8eeff, #f9f3ff, #faf7ff, #fcfbff, #ffffff);
@@ -1685,6 +1709,7 @@ h4{
 }
 
 @media (max-width: 575px) {
+
   .team-nav,
     #portfolio-flters {
       margin: 2% 0% !important;
