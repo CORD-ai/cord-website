@@ -2,6 +2,9 @@
 
 ![alt text](assets/img/portfolio/cordai.png)
 
+[![](https://img.shields.io/badge/Public%20Website-CORD.ai-orange)](https://cordai.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This is the official website of CORD.ai. Please contribute to the website by solving the issues posted by the team. 
 
 ## **Contributing**
