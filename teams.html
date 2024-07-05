@@ -33,6 +33,16 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    #main{
+      background-image: linear-gradient(to right bottom, #f7eeff, #f9eefe, #faeffe, #fceffd, #fdf0fd, #fef0fb, #fff1f9, #fff2f7, #fff3f4, #fff5f2, #fff7f1, #fffaf1);
+    }
+    .team-nav, .portfolio-flters{
+      box-shadow: 5px 2px 4px  #eecdff;
+background-image: linear-gradient(to right top, #f6f6f6, #efeafc, #eddcff, #eecdff) !important; 
+
+    }
+  </style>
 </head>
 
 <body>
@@ -45,18 +55,21 @@
         <!-- <h1 class="text-light"><a href="index.html"><span>CORD.ai</span></a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a><img id = "cordimg" src="assets/img/icon/Logo Medium.png" alt="cordai-logo" class="img-fluid"></a> -->
-        <h1 class="text-light"><a href="index.html"><img id = "cordimg" src="assets/img/icon/Logo Medium.png" alt="cordai-logo" class="img-fluid"> CORD.ai </a></h1>
+
+        <h1 class="text-light"><a><img id = "cordimg" src="assets/img/icon/Logo_Medium.png" alt="cordai-logo" class="img-fluid"> CORD.ai </a></h1>
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="projects.html">Our work</a></li>
-          <li><a class="nav-link scrollto active" href="teams.html">Team</a></li>
-		  <li><a class="nav-link scrollto" href="testimonials.html">Testimonials</a></li>
-          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="https://t.co/I9bSrPCA1x">Join our community</a></li>
+          <ul>
+            <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+            <li><a class="nav-link scrollto" href="index.html#about">About Us</a></li>
+            <li><a class="nav-link scrollto" href="projects.html">Our work</a></li>
+            <li><a class="nav-link scrollto active" href="teams.html">Team</a></li>
+            <li><a href="blogs.html" class="nav-link scrollto">Blogs</a></li>
+            <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+            <li><a class="getstarted scrollto" href='screening_task.html'>Screening Task</a></li>
+          </ul>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -67,6 +80,7 @@
   <main id="main">
 
             <section id="portfolio" class="portfolio">
+            
               <div class="container" data-aos="fade-up">
             
                 <div class="section-title">
@@ -75,83 +89,89 @@
                 </div>
             
                 <!-- Team members are grouped based on the data-filter value. Paste the data-filters value in the div container each member for the grouping -->
-                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                
+                <div class="row team-nav" data-aos="fade-up" data-aos-delay="100">
                   <div class="col-lg-12">
                     <ul id="portfolio-flters">
-                      <li data-filter="*" class="filter-active">All</li>
-					  <!--<li data-filter=".filter-executive-team">Executive Team</li>-->
-                      <li data-filter=".filter-core-team">Core Team</li>
-                      <li data-filter=".filter-managers">Community Managers</li>
-                      <!-- <li data-filter=".filter-contributors">Contributors</li> -->
+
+                      <li data-filter="*" class="filter-active team_all"  value="0">All</li>
+                      <li data-filter=".filter-core-team " id="research_advisors"  value="1">Research Advisors</li>
+                      <li data-filter=".filter-managers" id="mentors" value="2">Mentors</li>
+                      <li data-filter=".filter-contributors" value="3">Other Members</li>
+                       <div>
+                    </div>
                     </ul>
+                   
                   </div>
+                 
                 </div>
-            		   
-		  <div class="col-lg-4 col-md-6 portfolio-item filter-executive-team filter-core-team">
+
+                <div class="row portfolio-container justify-content-center team_container" data-aos="fade-up" data-aos-delay="200">
+                
+                  <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                                    <div class="portfolio-wrap">
+                                      <img src="assets/img/core_team/AneeshBose.jpg" class="img-fluid" alt="">
+                
+                                      <div class="portfolio-links">
+                                          <a href="https://github.com/AneeshBose"><i class="bi bi-github"></i></a>
+                                          <a href="https://twitter.com/bose_aneesh"><i class="bi bi-twitter"></i></a>
+                                          <a href="https://www.linkedin.com/in/aneesh-bose-at-acm"><i class="bi bi-linkedin"></i></a>
+                                      </div>
+                                      
+                                      <div class="portfolio-info  pb-3">
+                                        <div class="member-info-content">
+                                          <h4>Aneesh Bose</h4>
+                                          <span style="color: white;">ML Engineer @ Microsoft. NLP @ CAIR, DRDO</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                                    <div class="portfolio-wrap">
+                                      <img src="assets/img/core_team/SayanDebSarkar.jpg" class="img-fluid" alt="">
+                                      <div class="portfolio-links">
+                                          <a href="https://twitter.com/debsarkar_sayan"><i class="bi bi-twitter"></i></a>
+                                          <a href="https://github.com/sayands"><i class="bi bi-github"></i></a>
+                                          <a href="https://www.linkedin.com/in/sayands/"><i class="bi bi-linkedin"></i></a>
+                                      </div>
+                                      <div class="portfolio-info  pb-3 pb-3">
+                                        <div class="member-info-content">
+                                          <h4>Sayan Deb Sarkar</h4>
+                                          <span style="color: white;">MSc Computer Science @ ETH Zürich</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> -->
+                  <!----------------------------------------------Ashish--------------------------------------->
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
                     <div class="portfolio-wrap">
-                      <img src="assets/img/core_team/Ashish.png" class="img-fluid" alt="">
+                      <img src="assets/img/core_team/NikunjBansal2.jpg" class="img-fluid" alt="">
                       <div class="portfolio-links">
-                          <a href="https://twitter.com/v_ashish29"><i class="bi bi-twitter"></i></a>
-                          <a href="https://github.com/Ash-29"><i class="bi bi-github"></i></a>
-                          <a href="https://www.linkedin.com/feed/"><i class="bi bi-linkedin"></i></a>
+
+                        <a href="https://twitter.com/v_ashish29"><i class="bi bi-twitter"></i></a>
+                        <a href="https://github.com/Ash-29"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/feed/"><i class="bi bi-linkedin"></i></a>
                       </div>
                       <div class="portfolio-info  pb-3">
                         <div class="member-info-content">
                           <h4>Ashish Vashist</h4>
-						  <h4>Head of Administration</h4>
-                          <span style="color: white;">Research Intern @ CMU, Researcher @ NUS</span>
-                        </div>
-                        </div>
-                      </div>
-                  </div>
-		      
-		<div class="row portfolio-container justify-content-center" data-aos="fade-up" data-aos-delay="200">
-		   <div class="col-lg-4 col-md-6 portfolio-item filter-executive-team filter-core-team">
-                    <div class="portfolio-wrap">
-                      <img src="assets/img/core_team/AneeshBose.jpg" class="img-fluid" alt="">
+                          <span style="color: white;">Research intern @CMU ,Researcher @NUS</span>
 
-                      <div class="portfolio-links">
-                          <a href="https://github.com/AneeshBose"><i class="bi bi-github"></i></a>
-                          <a href="https://twitter.com/bose_aneesh"><i class="bi bi-twitter"></i></a>
-                          <a href="https://www.linkedin.com/in/aneesh-bose-at-acm"><i class="bi bi-linkedin"></i></a>
-                      </div>
-                      <div class="portfolio-info  pb-3">
-                        <div class="member-info-content">
-                          <h4>Aneesh Bose</h4>
-						  <h4>Joint Head of Administration</h4>
-                          <span style="color: white;">ML Engineer @ Microsoft, NLP @ CAIR-DRDO</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div> 
-			
-			
-	         <div class="col-lg-4 col-md-6 portfolio-item filter-executive-team filter-core-team">
-                    <div class="portfolio-wrap">
-                      <img src="assets/img/core_team/NikunjBansal2.jpg" class="img-fluid" alt="">
-                      <div class="portfolio-links">
-                          <a href="https://twitter.com/Nikunjbansal991"><i class="bi bi-twitter"></i></a>
-                          <a href="https://github.com/Nikunjbansal99"><i class="bi bi-github"></i></a>
-                          <a href="https://www.linkedin.com/in/nikunjbansal99/"><i class="bi bi-linkedin"></i></a>
-                      </div>
-                      <div class="portfolio-info  pb-3">
-                        <div class="member-info-content">
-                          <h4>Nikunj Bansal</h4>
-						  <h4>Head of Communications</h4>
-                          <span style="color: white;">AI Researcher. Ex - MLOps @ Railofy</span>
                         </div>
                       </div>
                     </div>
                   </div>
-			
-			
-				<div class="col-lg-4 col-md-6 portfolio-item filter-executive-team filter-core-team">
+
+                  <!---------------------------------------------------------------------------------------------->
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+
                     <div class="portfolio-wrap">
                       <img src="assets/img/core_team/anindya.jpeg" class="img-fluid" alt="">
                       <div class="portfolio-links">
-                          <a href="https://twitter.com/AnindyadeepS"><i class="bi bi-twitter"></i></a>
-                          <a href="https://github.com/Anindyadeep"><i class="bi bi-github"></i></a>
-                          <a href="https://www.linkedin.com/in/anindyadeep-sannigrahi-38683b1b6/"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://twitter.com/AnindyadeepS"><i class="bi bi-twitter"></i></a>
+                        <a href="https://github.com/Anindyadeep"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/anindyadeep-sannigrahi-38683b1b6/"><i class="bi bi-linkedin"></i></a>
                       </div>
                       <div class="portfolio-info  pb-3">
                         <div class="member-info-content">
@@ -162,45 +182,45 @@
                       </div>
                     </div>
                   </div>
-			
-		                  
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-executive-team filter-core-team">
-                    <div class="portfolio-wrap">
-                      <img src="assets/img/core_team/Guneet.jpg" class="img-fluid" alt="">
-                      <div class="portfolio-links">
-                        <a href="https://github.com/guneetsk99"><i class="bi bi-github"></i></a>
-                        <a href="https://twitter.com/guneetsk99"><i class="bi bi-twitter"></i></a>
-                        <a href="https://www.linkedin.com/in/guneetsk99/"><i class="bi bi-linkedin"></i></a>
-                      </div>
-                      <div class="portfolio-info  pb-3">
-                        <div class="member-info-content">
-                          <h4>Guneet Kohli</h4>
-						  <h4>Head of Relations</h4>
-                          <span style="color: white;">AI Engineer @ GreyOrange Robotics, GSoC'22 @ CERN, Ex-Researcher @ Alan Turing Institute</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div> 
-          
-                  
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
-                    <div class="portfolio-wrap">
-                      <img src="assets/img/core_team/SayanDebSarkar.jpg" class="img-fluid" alt="">
-                      <div class="portfolio-links">
-                          <a href="https://twitter.com/debsarkar_sayan"><i class="bi bi-twitter"></i></a>
-                          <a href="https://github.com/sayands"><i class="bi bi-github"></i></a>
-                          <a href="https://www.linkedin.com/in/sayands/"><i class="bi bi-linkedin"></i></a>
-                      </div>
-                      <div class="portfolio-info  pb-3 pb-3">
-                        <div class="member-info-content">
-                          <h4>Sayan Deb Sarkar</h4>
-                          <span style="color: white;">MSc Computer Science @ ETH Zürich</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-			
-                  
+                  <!------------------------------------------------------------------------------------>
+                  <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                                    <div class="portfolio-wrap">
+                                      <img src="assets/img/core_team/shankar.jpeg" class="img-fluid" alt="" height="385px" width="100%">
+                                      <div class="portfolio-links">
+                                          <a href="https://twitter.com/shankargopal89?t=2edy9kcrrLCrAFQ86FBRUg&s=09"><i class="bi bi-twitter"></i></a>
+                                          <a href="https://github.com/Shankaranarayanan89"><i class="bi bi-github"></i></a>
+                                          <a href="https://www.linkedin.com/in/sankaranarayanan-gopalan-44ab0138"><i class="bi bi-linkedin"></i></a>
+                                      </div>
+                                      <div class="portfolio-info  pb-3">
+                                        <div class="member-info-content">
+                                          <h4>Shankaranarayanan Gopalan</h4>
+                                          <span style="color: white;">Research scholar IIT Kharagpur</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                  
+                                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                                    <div class="portfolio-wrap">
+                                      <img src="assets/img/core_team/Nikunj.jpg" class="img-fluid" alt="">
+                                      <div class="portfolio-links">
+                                          <a href="https://twitter.com/Nikunjbansal991"><i class="bi bi-twitter"></i></a>
+                                          <a href="https://github.com/Nikunjbansal99"><i class="bi bi-github"></i></a>
+                                          <a href="https://www.linkedin.com/in/nikunjbansal99/"><i class="bi bi-linkedin"></i></a>
+                                      </div>
+                                      <div class="portfolio-info  pb-3">
+                                        <div class="member-info-content">
+                                          <h4>Nikunj Bansal</h4>
+                                          <span style="color: white;">Data Scientist @ Cognizant, Researcher. Ex - MLOps @ Railofy</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                   -->
+                
+                  <!----------------------------------------------------guneet------------------------>
+                
                   <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
                     <div class="portfolio-wrap">
                       <img src="assets/img/core_team/shankar.jpeg" class="img-fluid" alt="" height="385px" width="100%">
@@ -211,211 +231,173 @@
                       </div>
                       <div class="portfolio-info  pb-3">
                         <div class="member-info-content">
-                          <h4>Shankaranarayanan Gopalan</h4>
-                          <span style="color: white;">Research Scholar IIT Kharagpur</span>
+                          <h4>Guneet Kohli</h4>
+                          <span style="color: white;">AI Engineer @ GreyOrange Robotics, GSoC'22 @ CERN, Ex-Researcher @ Alan Turing
+                            Institute</span>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <!-------------------------------------------------------------------------------------------------->
+                  <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                                    <div class="portfolio-wrap">
+                                      <img src="assets/img/core_team/Aditya.jpg" class="img" alt="" height="385px" width="100%">
+                                      <div class="portfolio-links">
+                                          <a href="https://twitter.com/_AdityaKapoor_"><i class="bi bi-twitter"></i></a>
+                                          <a href="https://github.com/AdityaKapoor74"><i class="bi bi-github"></i></a>
+                                          <a href="https://www.linkedin.com/in/aditya-kapoor-446727152"><i class="bi bi-linkedin"></i></a>
+                                      </div>
+                                      <div class="portfolio-info  pb-3">
+                                        <div class="member-info-content">
+                                          <h4>Aditya Kapoor</h4>
+                                          <span style="color: white;">Predoc @ TCS Research , RA @ Robocomp , GSoC Mentor @ Robocomp</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                
+                                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                                    <div class="portfolio-wrap">
+                                      <img src="assets/img/core_team/GM Harshvardhan .jpeg" class="img-fluid" alt="">
+                                      <div class="portfolio-links">
+                                          <a href="https://github.com/GM-git-dotcom"><i class="bi bi-github"></i></a>
+                                          <a href="https://www.linkedin.com/in/gm-harshvardhan"><i class="bi bi-linkedin"></i></a>
+                                      </div>
+                                      <div class="portfolio-info pb-3">
+                                        <div class="member-info-content">
+                                          <h4>GM Harshvardhan</h4>
+                                          <span style="color: white;">MSAI Grad @ Boston University</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                
+                                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                                    <div class="portfolio-wrap">
+                                      <img src="assets/img/core_team/n_sarkar_1.png" class="img-fluid" alt="">
+                                      <div class="portfolio-links">
+                                          <a href="https://github.com/nsbits"><i class="bi bi-github"></i></a>
+                                          <a href="https://www.linkedin.com/in/nilansarkar"><i class="bi bi-linkedin"></i></a>
+                                      </div>
+                                      <div class="portfolio-info pb-3">
+                                        <div class="member-info-content">
+                                          <h4>Nilanjan Sarkar</h4>
+                                          <span style="color: white;">BITS Pilani Hyderabad, IIT Kanpur, Ex - Applied Scientist intern @Amazon</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                                    <div class="portfolio-wrap">
+                                      <img src="assets/img/core_team/VyshnaviGutta.jpg" class="img-fluid" alt="">
+                                      <div class="portfolio-links">
+                                          <a href="https://github.com/vyshnavigutta369"><i class="bi bi-github"></i></a>
+                                          <a href="https://www.linkedin.com/in/vyshnavi-gutta-308bab21b/"><i class="bi bi-linkedin"></i></a>
+                                      </div>
+                                      <div class="portfolio-info  pb-3">
+                                        <div class="member-info-content">
+                                          <h4>Vyshnavi Gutta</h4>
+                                          <span style="color: white;">MSCS @ gatech, Ex - Data scientist @ Jio</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                
+                                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                                    <div class="portfolio-wrap">
+                                      <img src="assets/img/core_team/Adnan_Abbas.png" class="img-fluid" alt="">
+                                      <div class="portfolio-links">
+                                          <a href="https://www.linkedin.com/in/adnan-abbas-903b711a2/"><i class="bi bi-linkedin"></i></a>
+                                      </div>
+                                      <div class="portfolio-info  pb-3">
+                                        <div class="member-info-content">
+                                          <h4>Adnan Abbas</h4>
+                                          <span style="color: white;">Researcher @MIT ,UG @ IIT KGP</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                
+                                  
+                
+                                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                                    <div class="portfolio-wrap">
+                                      <img src="assets/img/core_team/SivaKumar.png" class="img-fluid" alt="">
+                                      <div class="portfolio-links">
+                                          <a href="https://twitter.com/LakkojuSiva"><i class="bi bi-twitter"></i></a>
+                                          <a href="https://github.com/sivakumarlakkoju"><i class="bi bi-github"></i></a>
+                                          <a href="https://www.linkedin.com/in/vsskl"><i class="bi bi-linkedin"></i></a>
+                                      </div>
+                                      <div class="portfolio-info">
+                                        <div class="member-info-content">
+                                          <h4>Siva Kumar</h4>
+                                          <span style="color: white;">MTech Computer Science @ ISI Kolkata</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                
+                                  
+                
+                                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
+                                    <div class="portfolio-wrap">
+                                      <img src="assets/img/core_team/Balaji.jpeg" class="img-fluid" alt="">
+                                      <div class="portfolio-links">
+                                          <a href="https://twitter.com/BalajiAI"><i class="bi bi-twitter"></i></a>
+                                          <a href="https://github.com/balajiai"><i class="bi bi-github"></i></a>
+                                          <a href="https://www.linkedin.com/in/balaji-ai"><i class="bi bi-linkedin"></i></a>
+                                      </div>
+                                      <div class="portfolio-info pb-3">
+                                        <div class="member-info-content">
+                                          <h4>Balaji Varatharajan</h4>
+                                          <span style="color: white;">Final year undergrad, Deep Learning Intern at IIT KGP</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                
+                                  <br>
+                                  <br>
+                                  <br>
+                                  <br>
+                                  
+                                </div>  -->
 
-			
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
-                    <div class="portfolio-wrap">
-                      <img src="assets/img/core_team/AdityaKapoor.jpg" class="img-fluid" alt="">
-                      <div class="portfolio-links">
-                          <a href="https://twitter.com/_AdityaKapoor_"><i class="bi bi-twitter"></i></a>
-                          <a href="https://github.com/AdityaKapoor74"><i class="bi bi-github"></i></a>
-                          <a href="https://www.linkedin.com/in/aditya-kapoor-446727152"><i class="bi bi-linkedin"></i></a>
-                      </div>
-                      <div class="portfolio-info  pb-3">
-                        <div class="member-info-content">
-                          <h4>Aditya Kapoor</h4>
-                          <span style="color: white;">Predoc @ TCS Research, RA @ Robocomp, GSoC Mentor @ Robocomp</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div> 
-
-
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
-                    <div class="portfolio-wrap">
-                      <img src="assets/img/core_team/GM Harshvardhan .jpeg" class="img-fluid" alt="">
-                      <div class="portfolio-links">
-                          <a href="https://github.com/GM-git-dotcom"><i class="bi bi-github"></i></a>
-                          <a href="https://www.linkedin.com/in/gm-harshvardhan"><i class="bi bi-linkedin"></i></a>
-                      </div>
-                      <div class="portfolio-info pb-3">
-                        <div class="member-info-content">
-                          <h4>GM Harshvardhan</h4>
-                          <span style="color: white;">MSAI Grad @ Boston University</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
-                    <div class="portfolio-wrap">
-                      <img src="assets/img/core_team/SivaKumar.png" class="img-fluid" alt="">
-                      <div class="portfolio-links">
-                          <a href="https://twitter.com/LakkojuSiva"><i class="bi bi-twitter"></i></a>
-                          <a href="https://github.com/sivakumarlakkoju"><i class="bi bi-github"></i></a>
-                          <a href="https://www.linkedin.com/in/vsskl"><i class="bi bi-linkedin"></i></a>
-                      </div>
-                      <div class="portfolio-info">
-                        <div class="member-info-content">
-                          <h4>Siva Kumar</h4>
-                          <span style="color: white;">MTech Computer Science @ ISI Kolkata</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-
-                  <div class="col-lg-4 col-md-6 portfolio-item filter-core-team">
-                    <div class="portfolio-wrap">
-                      <img src="assets/img/core_team/Balaji.jpeg" class="img-fluid" alt="">
-                      <div class="portfolio-links">
-                          <a href="https://twitter.com/BalajiAI"><i class="bi bi-twitter"></i></a>
-                          <a href="https://github.com/balajiai"><i class="bi bi-github"></i></a>
-                          <a href="https://www.linkedin.com/in/balaji-ai"><i class="bi bi-linkedin"></i></a>
-                      </div>
-                      <div class="portfolio-info pb-3">
-                        <div class="member-info-content">
-                          <h4>Balaji Varatharajan</h4>
-                          <span style="color: white;">Final year undergrad, Deep Learning Intern at IIT KGP</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-<!--
-                  <br>
-                  <br>
-                  <br>
-                  <br>
-                  
+                </div>
+                
+              <div class="container">
+                <!-- Profile Container -->
+                <div id="profile-container" class="row">
+                 
                 </div>
               </div>
-            </section>
-            <div class="section-title">
-                    <h2>Community Managers</h2>
-                  </div>
-                  <section id="portfolio" class="portfolio">
-                    <div class="container" data-aos="fade-up">
+              <!-------------------other members container------------------------------->
+              <div class="container">
+                 <div id="other-member-container" class="row">
+  
+                 </div>  
+              </div>
+            
+              <!--Mentors list--------->
+            <div class="container">
+              <div class="row membersRow" id="mentor-section">
                 
-                      <div class="row portfolio-container justify-content-center" data-aos="fade-up" data-aos-delay="200">--->
+              </div>
+            </div>
+              </div>
+                
+            </section>
+            
+            
+            <div class="section-title">
+              <!-- <h2>Community Managers</h2> -->
+            </div>
+            <section class=" community_container">
+                 
                   
-                          <div class="col-lg-4 col-md-6 portfolio-item filter-managers">
-                              <div class="portfolio-wrap">
-                                <img src="assets/img/managers/Anannya Mishra .jpeg" class="img-fluid" alt="">
-                                <div class="portfolio-links">
-                                    <a href="http://github.com/Anann99"><i class="bi bi-github"></i></a>
-                                    <a href="https://twitter.com/whodatAM"><i class="bi bi-twitter"></i></a>
-                                    <a href="https://www.linkedin.com/in/anannya-mishra"><i class="bi bi-linkedin"></i></a>
-                                </div>
-                                <div class="portfolio-info">
-                                  <div class="member-info-content">
-                                    <h4>Anannya Mishra</h4>
-                                    <span style="color: white;">Junior Year Undergrad and Research Associate at NSUT, Delhi </span>
-                                  </div>
-                                  </div>
-                                </div>
-                            </div>
-      
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-managers">
-                          <div class="portfolio-wrap">
-                            <img src="assets/img/managers/Atharva_Kulkarni_new.jpeg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="https://github.com/mr-atharva-kulkarni/"><i class="bi bi-github"></i></a>
-                                <a href="https://twitter.com/Atharvak311/"><i class="bi bi-twitter"></i></a>
-                                <a href="https://www.linkedin.com/in/mr-atharva-kulkarni/"><i class="bi bi-linkedin"></i></a>
-                            </div>
-                            <div class="portfolio-info">
-                              <div class="member-info-content">
-                                <h4>Atharva Kulkarni</h4>
-                                <span style="color: white;">ML/NLP grad student at CMU LTI </span>
-                              </div>
-                              </div>
-                            </div>
-                        </div>
-      
-      
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-managers">
-                          <div class="portfolio-wrap">
-                            <img src="assets/img/managers/Ankit Gupta.jpeg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="https://github.com/Numeric-blip"><i class="bi bi-github"></i></a>
-                                <a href="https://twitter.com/SFDRUOS"><i class="bi bi-twitter"></i></a>
-                                <a href="https://www.linkedin.com/in/ankitg0812/"><i class="bi bi-linkedin"></i></a>
-                            </div>
-                            <div class="portfolio-info">
-                              <div class="member-info-content">
-                                <h4>Ankit Gupta</h4>
-                                <span style="color: white;">MS ChemE grad at Columbia Engineering</span>
-                              </div>
-                              </div>
-                            </div>
-                        </div>
-      
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-managers">
-                          <div class="portfolio-wrap">
-                            <img src="assets/img/managers/Nikunj_Pansari_new.jpeg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="https://github.com/nikunjpansari"><i class="bi bi-github"></i></a>
-                                <a href="https://twitter.com/Nikunj175"><i class="bi bi-twitter"></i></a>
-                                <a href="https://www.linkedin.com/in/nikunj-pansari-0b89b3128/"><i class="bi bi-linkedin"></i></a>
-                            </div>
-                            <div class="portfolio-info">
-                              <div class="member-info-content">
-                                <h4>Nikunj Pansari</h4>
-                                <span style="color: white;">M.Tech Scholar, IIT Patna</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-      
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-managers">
-                          <div class="portfolio-wrap">
-                            <img src="assets/img/managers/Sanya_Sinha_new.jpeg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="https://github.com/ssanya942"><i class="bi bi-github"></i></a>
-                      
-                                <a href="https://www.linkedin.com/in/sanya-sinha-13aab1200/"><i class="bi bi-linkedin"></i></a>
-                            </div>
-                            <div class="portfolio-info">
-                              <div class="member-info-content">
-                                <h4>Sanya Sinha</h4>
-                                <span style="color: white;">Research Intern @ UTAustin, Docs @ NumPy(Berkeley Institute for Data Science)</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-      
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-managers">
-                          <div class="portfolio-wrap">
-                            <img src="assets/img/managers/Jaskaran_Singh_Chhabra_new.jpeg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="https://github.com/Jaskaran2705"><i class="bi bi-github"></i></a>
-                                <a href="https://twitter.com/jaskarxn"><i class="bi bi-twitter"></i></a>
-                                <a href="https://www.linkedin.com/in/jaskaran-singh-chhabra-3bba2521b/"><i class="bi bi-linkedin"></i></a>
-                            </div>
-                            <div class="portfolio-info">
-                              <div class="member-info-content">
-                                <h4>Jaskaran Singh Chhabra</h4>
-                                <span style="color: white;">B.Tech (CSAI)- NSUT, Delhi</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-      
-                      </div>
-                  
-                    </div>
-                  </section>
 
-                  
+                </section>
 
   </main><!-- End #main -->
 
