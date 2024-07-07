@@ -8,6 +8,8 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+
 body {
 font-family: 'Montserrat', sans-serif ;
 background-repeat: no-repeat;
@@ -88,6 +90,7 @@ background-size: contain;
 } */
 
 
+
 a {
   color: #eb5d1e;
   text-decoration: none;
@@ -161,10 +164,11 @@ h6,
     position: relative;
     top: 50%;
   } */
-   #hero{
-    background-color: #000;
-   }
  
+ 
+
+
+
 }
 
 /*--------------------------------------------------------------
@@ -621,7 +625,7 @@ right: ;
 /* text-align: center; */
   }
   #hero{
-      /* padding-top: 15vh; */
+      padding-top: 15vh;
   }
 
      .team-nav,
@@ -632,7 +636,7 @@ right: ;
     
     font-weight: 600;
     font-size: 7rem;
-    line-height:5vh;
+    line-height:1.2em;
     justify-content: center;
     /* word-spacing: 5px; */
     
@@ -1808,4 +1812,12 @@ h4{
   padding-top: 2rem;
   /* text-align: center; */
 }
+}
+
+/* Constraint the logo size */
+
+@media only screen and ((max-width: 300px) or (max-height: 300px)) {
+  #cordimg {
+    display: none;
+  }
 }
