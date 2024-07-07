@@ -781,13 +781,14 @@ function generateOtherMembersCard(member) {
 
     // Create the card content using Bootstrap card component
     card.innerHTML = `
-        <div class="card col-xs-mx-4  m-2 new_card" style="height:95%;">
+        <div class="card  col-xs-mx-4  m-2 new_card" >
             <a href="${member.ProfileLink}" target="_blank">
+               
                 <img class="card-img-top col-xs-mx-4 img-fluid new_card_img " src="${member.imgSrc}" alt="${member.name} image">
             </a>
             <div class="card-body">
             <h5 class="card-title">${member.name}</h5>
-          <div style="display: flex; ">
+          <div  ">
     <a href="${member.portfolioLinks.twitter}" style="margin-right: 8%;"><i class="bi bi-twitter" style="font-size: 2rem ;"></i></a>
     <a href="${member.portfolioLinks.github}" style="margin-right: 8%;"><i class="bi bi-github" style="font-size: 2rem ;"></i></a>
     <a href="${member.portfolioLinks.linkedin}" style="margin-right: 8%;"><i class="bi bi-linkedin" style="font-size: 2rem ;"></i></a>
