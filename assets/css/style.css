@@ -31,34 +31,54 @@ background-size: contain;
 #profile-container, #mentor-section, #other-member-container{
   display: none;
 }
+.core-team-card {
+  width: 8rem;
+  max-height: auto;
+  border: 3px solid rgba(75, 74, 74, 0.982);
+  border-radius: 50%;
+}
+.new_card_img {
+  width: 8rem;
+  max-height: max-content;
+  border: 3px solid rgba(75, 74, 74, 0.982);
+  border-radius: 50%;
+}
 
-.new_card_img{
-  height: 15rem;  
-} 
-.new_card_img:hover{
+.new_card_img:hover {
   transition: 0.15s ease-in-out;
-  padding:15px;
-  border-radius: 25px;
-  
+  border: 3px solid white;
 }
-.new_card{
-  /* background-color: rgb(0, 0, 0); */
-  /* border:0.5px solid white; */
-  border: none;
-    /* box-shadow: 2px 2px 2px rgba(57, 56, 56, 0.466); */
+
+.new_card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;    
+  padding: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* border: 1px solid rgb(0, 0, 0); */
+  align-items: center ;
+  text-align: center;
 }
-.new_card:hover{
-  /* border: 2px solid rgb(255, 255, 255); */
-  box-shadow: 20px 20px 10px  rgba(57, 56, 56, 0.466);
-  transition: 0.5s ease-in-out;
-  
- 
-  
+
+.new_card:hover {
+  box-shadow: 20px 20px 10px rgba(57, 56, 56, 0.466);
+  transition: 0.3s ease-in-out;
+  /* color: white;   */
+  /* background-image: linear-gradient(to right top, #ff9494, #ff9f91, #ffaa90, #ffb691, #ffc194); */
+  background-image: linear-gradient(to right bottom, #ddcdea, #d5cadf, #eae7f1, #e3dcf4, #f1c0c0);
 }
 
 #profile-container {
   opacity: 0;
   /* Start with element hidden */
+}
+.links{
+  font-size: 2rem;
+  margin: 1rem;
+}
+.links a{
+  margin: 10px;
 }
 /* #hero { 
   background: url(/backgroundGif.gif) no-repeat center center fixed; 
@@ -140,7 +160,15 @@ h6,
   #footer .footer-newsletter{
   margin-top: 100px !important;
   }
+  /* .hero{
+    position: relative;
+    top: 50%;
+  } */
  
+ 
+
+
+
 }
 
 /*--------------------------------------------------------------
@@ -200,7 +228,7 @@ h6,
 */
 .navbar {
   padding: 0 ;
-  opacity: 0.7;
+  /* opacity: 0.7; */
   
 }
 
@@ -216,7 +244,27 @@ h6,
 .navbar li {
   position: relative;
 }
+.blogs-coming-soon{
+  position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
 
+ /* z-index: 10; */
+ width: 70%;
+ height: 75vh;
+ top: 20%;
+ /* background-color: #b00a0a; */
+    background-image: linear-gradient(to right, #b48aee, #c97fd9, #d776c2, #de70ab, #e06c95, #e46f8a, #e67280, #e67776, #ec8174, #f18c72, #f49772, #f7a272);
+/* border: 10px solid rgb(1, 1, 1); */
+box-shadow: 10px 30px 20px rgba(0, 0, 0, 0.533);
+/* border-radius: 50%; */
+/* filter:blur(10px); */
+
+}
+.blogs-coming-soon h1{
+  font-size: 10rem;
+}
 .navbar a,
 .navbar a:focus {
   display: flex;
@@ -448,7 +496,7 @@ h6,
 }
 #hero {
   width: 100%;
-  height: 100vh;
+  /* height: auto; */
   border-bottom: 2px solid #fcebe3;
   margin: 72px 0 -72px 0;
   background-attachment: fixed;
@@ -458,7 +506,9 @@ h6,
 }
 
 
-
+#hero p{
+  font-size: 2vw;
+}
  #hero h1 {
             font-weight: 600;
             font-size: 5vw; 
@@ -495,31 +545,33 @@ h6,
  
 }
 
-
+.hero-container{
+  
+}
 #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 1.4rem;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 2% 5%;
+  padding: 3% 15%;
   /* border-radius: 3px; */
   transition: 0.2s ease-in !important;
   margin-top: 30px;
-  color: #fff;
+  color: #000000;
   font-weight: 300;
-  border:1px solid #212121; 
+  border:1px solid #000000; 
   /* position: relative;
   left: 55%;   */
-  border-radius: 10px;
-  background: #212122;
+  border-radius: 5px;
+  background: transparent;
 }
 
 #hero .btn-get-started:hover {
   /* font-weight: 500;
   font-weight: 600; */
-  background-color: transparent;
-  color: #212121;
+  background-color: #212121;
+  color: #fff;
 }
 
 #hero .animated {
@@ -528,7 +580,7 @@ h6,
 
 @media (max-width: 991px) {
   #hero {
-    height: calc(100vh - 72px);
+    /* height: calc(100vh - 72px); */
   }
   #hero h1{
     font-weight: 600 ;
@@ -583,10 +635,10 @@ right: ;
   #hero h1 {
     
     font-weight: 600;
-    font-size: 6rem;
-    line-height: 46px;
+    font-size: 7rem;
+    line-height:1.2em;
     justify-content: center;
-    word-spacing: 5px;
+    /* word-spacing: 5px; */
     
     /* margin-bottom: 90px; */
   }
@@ -611,6 +663,9 @@ right: ;
   #hero .hero-img img {
     width: 70%;
   }
+  #hero #lottie-container{
+    display: none;
+  }
 }
 
 @media (max-width: 575px) {
@@ -634,7 +689,7 @@ right: ;
  
   #hero h1{
     margin-top: 5rem;
-    font-size: 5rem;
+    font-size: 10vw;
     font-weight: 600;
   }
   #hero h2{
@@ -706,7 +761,7 @@ section {
 }
 
 .section-title h2 {
-  font-size: 24px;
+  font-size: 1.8rem;
   font-weight: 700;
   padding-bottom: 0;
   line-height: 1px;
@@ -715,7 +770,7 @@ section {
 }
 
 .section-title p {
-  padding-bottom: 15px;
+  padding-bottom: 1.5rem;
   margin-bottom: 15px;
   position: relative;
   font-size: 32px;
@@ -864,6 +919,7 @@ background-image: linear-gradient(to top, #ffffff, #fbfafe, #f7f5fe, #f3effd, #e
   position: relative;
   overflow: hidden;
   margin: 0 0 40px 0;
+  height: max-content;
   /* background: rgb(243, 151, 255); */
   box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
   transition: all 0.3s ease-in-out;
@@ -908,7 +964,16 @@ background-image: linear-gradient(to top, #ffffff, #fbfafe, #f7f5fe, #f3effd, #e
   line-height: 28px;
   margin-bottom: 0;
 }
+.card-items{
+  border: 1px solid black;
+  
+}
+.card-items img{
+  max-width: 8rem;
+  border-radius: 50%;
+  border: 3px solid rgb(24, 24, 24);
 
+}
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
@@ -1724,6 +1789,29 @@ h4{
     text-align-last: center;
     padding: 3px 0;
   }
+  .section-title p{
+  font-size: 2.6rem;
+  }
+  #hero h1{
+  /* margin-top: 20%; */
+  /* font-size: 8vw; */
+  /* line-height: 50%; */
+  /* letter-spacing: 2px; */
+  /* word-spacing: 5px; */
+  line-height: 1.5em;
+  }
+     #hero p {
+       /* margin-top: 20%; */
+       font-size: 2rem;
+     }
+  #hero #lottie-container{
+  display: none;
+}
+#hero{
+  height:max-content;
+  padding-top: 2rem;
+  /* text-align: center; */
+}
 }
 
 /* Constraint the logo size */
