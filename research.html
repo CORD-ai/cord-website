@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research – CORD.ai</title>
+<meta name="description" content="CORD.ai is an inclusive open AI research community. Members collaborate across AI domains and release their code, datasets and models openly.">
+<meta property="og:title" content="Research – CORD.ai">
+<meta property="og:description" content="CORD.ai is an inclusive open AI research community. Members collaborate across AI domains and release their code, datasets and models openly.">
+<link rel="icon" type="image/png" href="/assets/site/7eeb4da85ca34c05df0244302b764256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Noto+Sans+Devanagari:wght@600&amp;family=Noto+Sans+Tamil:wght@600&amp;family=Noto+Sans+Kannada:wght@600&amp;family=Noto+Sans+Telugu:wght@600&amp;family=Noto+Sans+Bengali:wght@600&amp;family=Noto+Sans+Malayalam:wght@600&amp;family=Noto+Sans+Gujarati:wght@600&amp;family=Noto+Sans+Oriya:wght@600&amp;family=Noto+Sans+Gurmukhi:wght@600&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+<style>
+
+body{margin:0}
+.ph{position:relative;background:#FAFAF7}
+.ph::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(#D6D3CA 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:radial-gradient(ellipse 75% 100% at 85% 0%,#000 25%,transparent 75%);mask-image:radial-gradient(ellipse 75% 100% at 85% 0%,#000 25%,transparent 75%)}
+.ph>*{position:relative}
+.rv{opacity:0;animation:rv-up .7s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}.d5{animation-delay:.45s}
+@keyframes rv-up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){.sr{animation:rv-up linear both;animation-timeline:view();animation-range:entry 0% cover 20%}}
+.card{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 32px -20px rgba(17,19,24,.35);border-color:#D6D3CA}
+.btn-p{transition:background .2s ease}.btn-p:hover{background:#2A2D35;color:#FFFFFF}
+.btn-g{transition:background .2s ease}.btn-g:hover{background:#F3F2EE;color:#111318}
+.dot{animation:blink 2.4s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+@media (prefers-reduced-motion: reduce){.rv,.sr{animation:none;opacity:1;transform:none}.dot{animation:none}}
+a{color:#C2410C}a:hover{color:#9A3412}
+.sb-track{display:flex;gap:64px;width:max-content;animation:sb-scroll 60s linear infinite}
+.sb-rev{animation-direction:reverse}
+.sb-slow{animation-duration:80s}
+@keyframes sb-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.sb-track{animation:none}}
+html{scroll-behavior:smooth}
+@keyframes rv-up{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes drift{to{background-position:220px 110px}}
+.ph::before{animation:drift 60s linear infinite}
+.ph h1::after{content:"";display:block;width:56px;height:3px;border-radius:2px;background:#C2410C;margin-top:22px;transform-origin:left;animation:grow .9s .6s cubic-bezier(.2,.7,.2,1) both}
+.arw{display:inline-block;transition:translate .25s ease}
+a:hover .arw,.card:hover .arw{translate:5px 0}
+a{transition:color .2s ease}
+.btn-p svg,.btn-g svg{transition:translate .25s ease}.btn-p:hover svg,.btn-g:hover svg{translate:4px 0}
+.card img{transition:transform .5s cubic-bezier(.2,.7,.2,1)}.card:hover img{transform:scale(1.06)}
+.row{transition:background .25s ease,padding .25s ease}.row:hover{background:#F3F2EE;padding-left:12px;padding-right:12px}
+details p{animation:fade-in .35s ease}
+details summary span:first-child{transition:color .2s ease}details summary:hover span:first-child{color:#C2410C}
+.play span{transition:transform .3s cubic-bezier(.2,.7,.2,1)}.play:hover span{transform:scale(1.12)}
+.logo-tile{transition:translate .3s ease,border-color .25s ease,box-shadow .3s ease}.logo-tile:hover{translate:0 -3px;box-shadow:0 10px 24px -18px rgba(17,19,24,.4)}
+@supports (animation-timeline: view()){
+.card,.row,.logo-strip-item{animation:rv-up linear both;animation-timeline:view();animation-range:entry 0% cover 18%}
+.sr .card,.sr .row{animation-range:entry 5% cover 22%}
+h2{animation:rv-up linear both;animation-timeline:view();animation-range:entry 0% cover 15%}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.ph::before,.ph h1::after,.card,.row,h2,details p{animation:none!important}.ph h1::after{transform:none}.card:hover img,.play:hover span{transform:none}.row:hover{padding-left:0;padding-right:0}}
+.site{background-color:#FAFAF7;background-image:radial-gradient(900px 620px at 100% 0%,rgba(194,65,12,.08),transparent 60%),radial-gradient(820px 720px at 0% 38%,rgba(55,48,163,.05),transparent 62%),radial-gradient(900px 700px at 100% 72%,rgba(14,116,144,.05),transparent 62%),radial-gradient(700px 520px at 10% 100%,rgba(194,65,12,.05),transparent 62%),linear-gradient(rgba(17,19,24,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(17,19,24,.035) 1px,transparent 1px);background-size:auto,auto,auto,auto,48px 48px,48px 48px}
+.ph{background:transparent!important}
+.ph::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-radial-gradient(circle at 90% 18%,transparent 0 54px,rgba(194,65,12,.09) 54px 55px);-webkit-mask-image:radial-gradient(circle at 90% 18%,#000 0,#000 18%,transparent 52%);mask-image:radial-gradient(circle at 90% 18%,#000 0,#000 18%,transparent 52%);animation:breathe 9s ease-in-out infinite;transform-origin:90% 18%}
+@keyframes breathe{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.04);opacity:1}}
+.band{position:relative;overflow:hidden}
+.band::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;border:1px dashed rgba(17,19,24,.12);pointer-events:none;animation:spin 120s linear infinite}
+.band::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;border:1px solid rgba(194,65,12,.12);pointer-events:none}
+.band.r::before{right:-220px;top:-180px}.band.r::after{right:-130px;top:-90px}
+.band.l::before{left:-240px;bottom:-200px}.band.l::after{left:-150px;bottom:-110px}
+.band>*{position:relative}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.ph::after,.band::before{animation:none}}
+
+
+body{margin:0}
+nav a{transition:color .2s ease,border-color .25s ease,background .2s ease}
+nav a:hover{color:#111318!important;border-bottom-color:#D6D3CA!important}
+nav a:last-child:hover{background:#2A2D35!important;color:#FFFFFF!important;border-bottom-color:transparent!important}
+
+
+body{margin:0}
+footer a{transition:color .2s ease}
+footer nav a:hover,footer div a:hover{color:#C2410C!important}
+
+</style>
+</head>
+<body>
+<div class="site" style="font-family: Inter, system-ui, sans-serif; color: #111318; background-color: #FAFAF7; font-size: 16px; line-height: 1.6">
+
+<header style="font-family: Inter, system-ui, sans-serif; color: #111318; background: rgba(250,250,247,0.82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid #E7E5DF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; min-height: 56px">
+<a href="/" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #111318; min-height: 44px">
+<img src="/assets/site/7eeb4da85ca34c05df0244302b764256.png" alt="" style="width: 40px; height: 34px; object-fit: contain">
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.01em">CORD.ai</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px">
+
+<a href="/" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none; font-size: 15px; font-weight: 500; border-bottom: 2px solid transparent; color: #5B616B">Home</a>
+
+<a href="/team.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none; font-size: 15px; font-weight: 500; border-bottom: 2px solid transparent; color: #5B616B">Team</a>
+
+<a href="/research.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none; font-size: 15px; font-weight: 500; border-bottom: 2px solid #C2410C; color: #111318">Research</a>
+
+<a href="https://www.youtube.com/@cordai530" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none; font-size: 15px; font-weight: 500; border-bottom: 2px solid transparent; color: #5B616B">Watch our sessions</a>
+
+<a href="/join.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; margin-left: 8px; background: #111318; color: #FFFFFF; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 15px">Join us</a>
+</nav>
+</div>
+</header>
+
+
+<section class="ph" style="border-bottom: 1px solid #E7E5DF">
+<div class="rv d1" style="max-width: 1200px; margin: 0 auto; padding: 80px 32px 48px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5B616B"><span class="dot" style="width: 6px; height: 6px; border-radius: 50%; background: #C2410C"></span>Research</div>
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(2.25rem, 4vw, 3.5rem); line-height: 1.05; letter-spacing: -0.02em">What we're working on</h1>
+<p style="margin: 0; font-size: 19px; color: #5B616B; max-width: 640px">Open, community-driven AI research, from cultural benchmarks for Indian languages to how vision-language models really use images.</p>
+</div>
+</section>
+
+<section style="position: relative; overflow: hidden; background: rgba(243,242,238,.6); border-bottom: 1px solid #E7E5DF">
+<div aria-hidden="true" style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-around; overflow: hidden; font-family: 'Noto Sans Devanagari', 'Noto Sans Tamil', 'Noto Sans Kannada', 'Noto Sans Telugu', 'Noto Sans Bengali', 'Noto Sans Malayalam', 'Noto Sans Gujarati', 'Noto Sans Oriya', 'Noto Sans Gurmukhi', sans-serif; font-weight: 600; font-size: 60px; line-height: 1.2; color: #C2410C; opacity: 0.06; pointer-events: none; user-select: none; white-space: nowrap">
+<div class="sb-track"><span>संस्कृति</span><span>సంస్కృతి</span><span>સંસ્કૃતિ</span><span>संस्कृती</span><span>ಸಂಸ್ಕೃತಿ</span><span>സംസ്കാരം</span><span>ਸੱਭਿਆਚਾਰ</span><span>கலாச்சாரம்</span><span>সংস্কৃতি</span><span>ସଂସ୍କୃତି</span><span>संस्कृति</span><span>సంస్కృతి</span><span>સંસ્કૃતિ</span><span>संस्कृती</span><span>ಸಂಸ್ಕೃತಿ</span><span>സംസ്കാരം</span><span>ਸੱਭਿਆਚਾਰ</span><span>கலாச்சாரம்</span><span>সংস্কৃতি</span><span>ସଂସ୍କୃତି</span></div><div class="sb-track sb-rev"><span>సంస్కృతి</span><span>સંસ્કૃતિ</span><span>संस्कृती</span><span>ಸಂಸ್ಕೃತಿ</span><span>സംസ്കാരം</span><span>ਸੱਭਿਆਚਾਰ</span><span>கலாச்சாரம்</span><span>সংস্কৃতি</span><span>ସଂସ୍କୃତି</span><span>संस्कृति</span><span>సంస్కృతి</span><span>સંસ્કૃતિ</span><span>संस्कृती</span><span>ಸಂಸ್ಕೃತಿ</span><span>സംസ്കാരം</span><span>ਸੱਭਿਆਚਾਰ</span><span>கலாச்சாரம்</span><span>সংস্কৃতি</span><span>ସଂସ୍କୃତି</span><span>संस्कृति</span></div><div class="sb-track sb-slow"><span>સંસ્કૃતિ</span><span>संस्कृती</span><span>ಸಂಸ್ಕೃತಿ</span><span>സംസ്കാരം</span><span>ਸੱਭਿਆਚਾਰ</span><span>கலாச்சாரம்</span><span>সংস্কৃতি</span><span>ସଂସ୍କୃତି</span><span>संस्कृति</span><span>సంస్కృతి</span><span>સંસ્કૃતિ</span><span>संस्कृती</span><span>ಸಂಸ್ಕೃತಿ</span><span>സംസ്കാരം</span><span>ਸੱਭਿਆਚਾਰ</span><span>கலாச்சாரம்</span><span>সংস্কৃতি</span><span>ସଂସ୍କୃତି</span><span>संस्कृति</span><span>సంస్కృతి</span></div><div class="sb-track sb-rev"><span>संस्कृती</span><span>ಸಂಸ್ಕೃತಿ</span><span>സംസ്കാരം</span><span>ਸੱਭਿਆਚਾਰ</span><span>கலாச்சாரம்</span><span>সংস্কৃতি</span><span>ସଂସ୍କୃତି</span><span>संस्कृति</span><span>సంస్కృతి</span><span>સંસ્કૃતિ</span><span>संस्कृती</span><span>ಸಂಸ್ಕೃತಿ</span><span>സംസ്കാരം</span><span>ਸੱਭਿਆਚਾਰ</span><span>கலாச்சாரம்</span><span>সংস্কৃতি</span><span>ସଂସ୍କୃତି</span><span>संस्कृति</span><span>సంస్కృతి</span><span>સંસ્કૃતિ</span></div><div class="sb-track"><span>ಸಂಸ್ಕೃತಿ</span><span>സംസ്കാരം</span><span>ਸੱਭਿਆਚਾਰ</span><span>கலாச்சாரம்</span><span>সংস্কৃতি</span><span>ସଂସ୍କୃତି</span><span>संस्कृति</span><span>సంస్కృతి</span><span>સંસ્કૃતિ</span><span>संस्कृती</span><span>ಸಂಸ್ಕೃತಿ</span><span>സംസ്കാരം</span><span>ਸੱਭਿਆਚਾਰ</span><span>கலாச்சாரம்</span><span>সংস্কৃতি</span><span>ସଂସ୍କୃତି</span><span>संस्कृति</span><span>సంస్కృతి</span><span>સંસ્કૃતિ</span><span>संस्कृती</span></div><div class="sb-track sb-rev sb-slow"><span>സംസ്കാരം</span><span>ਸੱਭਿਆਚਾਰ</span><span>கலாச்சாரம்</span><span>সংস্কৃতি</span><span>ସଂସ୍କୃତି</span><span>संस्कृति</span><span>సంస్కృతి</span><span>સંસ્કૃતિ</span><span>संस्कृती</span><span>ಸಂಸ್ಕೃತಿ</span><span>സംസ്കാരം</span><span>ਸੱਭਿਆਚਾਰ</span><span>கலாச்சாரம்</span><span>সংস্কৃতি</span><span>ସଂସ୍କୃତି</span><span>संस्कृति</span><span>సంస్కృతి</span><span>સંસ્કૃતિ</span><span>संस्कृती</span><span>ಸಂಸ್ಕೃತಿ</span></div>
+</div>
+<div style="position: relative; max-width: 1200px; margin: 0 auto; padding: 96px 32px; display: flex; flex-wrap: wrap; gap: 48px 64px; align-items: center">
+<img src="/assets/site/552da9b2f8416190421c3ad126f3b648.jpg" alt="Sanskriti Bench logo: a peacock in front of a mandala and the Ashoka Chakra" style="flex: 0 1 380px; width: 100%; max-width: 380px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 16px; border: 1px solid #E7E5DF">
+<div style="flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #C2410C">FEATURED PROJECT</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 10px; border-radius: 999px; background: #FFF1E8; color: #9A3412">In progress</span>
+</div>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.05; letter-spacing: -0.01em">Sanskriti Bench</h2>
+<p style="margin: 0; font-size: 20px; font-weight: 500; color: #111318">An Indian cultural benchmark for testing how well AI models understand India, from festivals and food to history, proverbs and everyday life.</p>
+<p style="margin: 0; font-weight: 500; color: #2A2F36">Every question is written by hand by native speakers from different regions, across Indian languages such as Tamil, Kannada and Telugu, so the benchmark reflects how people actually live and speak. With support from Hugging Face, we're growing it into a cultural alignment dataset for Indian languages and dialects.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px 24px; padding: 8px 0">
+<div style="border-top: 2px solid #111318; padding-top: 12px"><strong style="display: block; font-weight: 700; font-size: 17px">Native-script QA, not translation</strong><span style="font-size: 15px; font-weight: 500; color: #2A2F36">Question–answer pairs are authored directly in each language’s own script by native speakers, avoiding the artefacts of machine-translated English benchmarks.</span></div>
+<div style="border-top: 2px solid #111318; padding-top: 12px"><strong style="display: block; font-weight: 700; font-size: 17px">Region-grounded knowledge probes</strong><span style="font-size: 15px; font-weight: 500; color: #2A2F36">Items test geographic, historical, cultural, proverbial and demographic knowledge tied to specific regions, where general-purpose LLMs often over-generalise.</span></div>
+<div style="border-top: 2px solid #111318; padding-top: 12px"><strong style="display: block; font-weight: 700; font-size: 17px">Languages and dialects</strong><span style="font-size: 15px; font-weight: 500; color: #2A2F36">Coverage extends beyond standard registers to regional dialects, so models are evaluated on how language is actually used.</span></div>
+<div style="border-top: 2px solid #111318; padding-top: 12px"><strong style="display: block; font-weight: 700; font-size: 17px">From evaluation to alignment</strong><span style="font-size: 15px; font-weight: 500; color: #2A2F36">Built to evaluate Indic and multilingual LLMs, and being extended into a cultural alignment dataset with Hugging Face’s Data is Better Together initiative.</span></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="/join.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; background: #111318; color: #FFFFFF; text-decoration: none; border-radius: 8px; font-weight: 600">Contribute to Sanskriti Bench</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="papers">
+<div style="max-width: 1200px; margin: 0 auto; padding: 80px 32px 96px; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #C2410C">Publications</div>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 36px; line-height: 1.1">Papers from CORD.ai members</h2>
+</div>
+<ol style="margin: 0; padding: 0; list-style: none; border-top: 1px solid #E7E5DF">
+
+<li class="row" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px 0; border-radius: 10px; border-bottom: 1px solid #E7E5DF"><span style="flex: 0 0 160px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5B616B">WACV 2027 Workshop</span><div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 4px"><strong style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600; line-height: 1.3">Do Medical Vision Language Models Actually See? A Counterfactual Grounding Framework and Hard-Negative Contrastive Training for Visually-Reliant Medical VLMs</strong><span style="color: #5B616B; font-size: 15px">Anas Zafar, Leema Krishna Murali, Siddhant Bharadwaj, Ashish Vashist, Jia Wu</span></div><a href="#" style="align-self: center; font-weight: 600; text-decoration: none">Paper <span class="arw" aria-hidden="true">→</span></a></li>
+
+<li class="row" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px 0; border-radius: 10px; border-bottom: 1px solid #E7E5DF"><span style="flex: 0 0 160px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5B616B">ICLR 2026 Workshop</span><div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 4px"><strong style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600; line-height: 1.3">Beyond Accuracy: Evaluating Visual Grounding in Multimodal Medical Reasoning</strong><span style="color: #5B616B; font-size: 15px">Anas Zafar, Leema Krishna Murali, Ashish Vashist</span></div><a href="https://arxiv.org/abs/2603.03437" style="align-self: center; font-weight: 600; text-decoration: none">Paper <span class="arw" aria-hidden="true">→</span></a></li>
+
+<li class="row" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px 0; border-radius: 10px; border-bottom: 1px solid #E7E5DF"><span style="flex: 0 0 160px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5B616B">ICCV 2025 Workshop</span><div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 4px"><strong style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600; line-height: 1.3">Multiscale Diagnostics of Visual Language Models</strong><span style="color: #5B616B; font-size: 15px">Siddhant Bharadwaj, Ashish Vashist, Mohd. Azfar, Rohit Kumar Salla, Divyansh Verma, Ramya Manasa Amancherla</span></div><a href="#" style="align-self: center; font-weight: 600; text-decoration: none">Paper <span class="arw" aria-hidden="true">→</span></a></li>
+
+<li class="row" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px 0; border-radius: 10px; border-bottom: 1px solid #E7E5DF"><span style="flex: 0 0 160px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5B616B">ACL Findings 2023</span><div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 4px"><strong style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600; line-height: 1.3">HaVQA: A Dataset for Visual Question Answering and Multimodal Research in Hausa Language</strong><span style="color: #5B616B; font-size: 15px">Shantipriya Parida, Idris Abdulmumin, Shamsuddeen Hassan Muhammad, Aneesh Bose, Guneet Singh Kohli, Ibrahim Said Ahmad, Ketan Kotwal, Sayan Deb Sarkar, Ondřej Bojar, Habeebah Adamu Kakudi</span></div><a href="https://aclanthology.org/2023.findings-acl.646" style="align-self: center; font-weight: 600; text-decoration: none">Paper <span class="arw" aria-hidden="true">→</span></a></li>
+
+</ol>
+</div>
+</section>
+
+
+<footer style="font-family: Inter, system-ui, sans-serif; background: #F3F2EE; color: #111318; border-top: 1px solid #E7E5DF; font-size: 15px; line-height: 1.6">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 32px 32px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-wrap: wrap; gap: 40px 56px">
+<div style="flex: 2 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; gap: 10px"><img src="/assets/site/7eeb4da85ca34c05df0244302b764256.png" alt="" style="width: 44px; height: 38px; object-fit: contain"><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 24px">CORD.ai</span></div>
+<p style="margin: 0; color: #5B616B; max-width: 360px">A Collaborative Open Research in Deep Learning.</p>
+<a href="mailto:social.cordai@gmail.com" style="color: #C2410C; text-decoration: none; font-weight: 500">social.cordai@gmail.com</a>
+</div>
+<nav aria-label="Footer" style="flex: 1 1 160px; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #5B616B; margin-bottom: 8px">Explore</div>
+<a href="/#about" style="color: #111318; text-decoration: none; min-height: 32px">About us</a>
+<a href="/team.html" style="color: #111318; text-decoration: none; min-height: 32px">Team</a>
+<a href="/research.html" style="color: #111318; text-decoration: none; min-height: 32px">Research</a>
+<a href="/join.html" style="color: #111318; text-decoration: none; min-height: 32px">Join us</a>
+</nav>
+<div style="flex: 1 1 160px; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #5B616B; margin-bottom: 8px">Follow</div>
+<a href="https://twitter.com/CRforAi" style="color: #111318; text-decoration: none; min-height: 32px">Twitter / X</a>
+<a href="https://www.youtube.com/@cordai530" style="color: #111318; text-decoration: none; min-height: 32px">YouTube</a>
+<a href="https://github.com/CORD-ai" style="color: #111318; text-decoration: none; min-height: 32px">GitHub</a>
+</div>
+</div>
+<div style="border-top: 1px solid #E7E5DF; padding-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: #5B616B; font-size: 14px">
+<span>© CORD.ai. All rights reserved.</span>
+<a href="https://github.com/CORD-ai/cord-website" style="color: #5B616B">Contribute to this website on GitHub</a>
+</div>
+</div>
+</footer>
+
+</div>
+</body>
+</html>
