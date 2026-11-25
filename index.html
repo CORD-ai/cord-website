@@ -1,590 +1,606 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CORD.ai – A Collaborative Open Research in Deep Learning</title>
+<meta name="description" content="CORD.ai is an inclusive open AI research community. Members collaborate across AI domains and release their code, datasets and models openly.">
+<meta property="og:title" content="CORD.ai – A Collaborative Open Research in Deep Learning">
+<meta property="og:description" content="CORD.ai is an inclusive open AI research community. Members collaborate across AI domains and release their code, datasets and models openly.">
+<link rel="icon" type="image/png" href="/assets/site/7eeb4da85ca34c05df0244302b764256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Noto+Sans+Devanagari:wght@600&amp;family=Noto+Sans+Tamil:wght@600&amp;family=Noto+Sans+Kannada:wght@600&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+<style>
 
-  <title>CORD.ai</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+body{margin:0}
+a{color:#C2410C}a:hover{color:#9A3412}
+details summary{cursor:pointer;list-style:none}
+details summary::-webkit-details-marker{display:none}
+.faq-plus{transition:transform .25s ease}
+details[open] .faq-plus{transform:rotate(45deg)}
+.rv{opacity:0;animation:rv-up .8s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}.d4{animation-delay:.55s}.d5{animation-delay:.7s}
+@keyframes rv-up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.sig{stroke-dasharray:6 94;stroke-dashoffset:100;animation:sig 3.6s linear infinite}
+.s2{animation-delay:.7s}.s3{animation-delay:1.4s}.s4{animation-delay:2.1s}.s5{animation-delay:2.8s}
+@keyframes sig{to{stroke-dashoffset:0}}
+.node-p{transform-box:fill-box;transform-origin:center;animation:ra-pulse 2.4s ease-in-out infinite}
+.float{animation:float 5s ease-in-out infinite}.f2{animation-delay:-1.6s}.f3{animation-delay:-3.2s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.dot{animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+.mq{display:flex;gap:24px;width:max-content;animation:mq 50s linear infinite}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.logo-tile{transition:background .25s ease,border-color .25s ease}.logo-tile:hover{border-color:#C2410C}
+.mq:hover{animation-play-state:paused}
+.cm{stroke-dasharray:0.01 99.99;stroke-dashoffset:100;animation:comet 3.6s cubic-bezier(.45,0,.55,1) infinite}
+.ct{stroke-dasharray:14 86;stroke-dashoffset:114;opacity:.28;animation:trail 3.6s cubic-bezier(.45,0,.55,1) infinite}
+.c2{animation-delay:.6s}.c3{animation-delay:1.2s}.c4{animation-delay:1.8s}.c5{animation-delay:2.4s}.c6{animation-delay:3s}
+@keyframes comet{0%{stroke-dashoffset:100;opacity:0}8%{opacity:1}92%{opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes trail{0%{stroke-dashoffset:114;opacity:0}10%{opacity:.28}100%{stroke-dashoffset:14;opacity:0}}
+.act{animation:act 3.6s ease-in-out infinite}
+.a2{animation-delay:.6s}.a3{animation-delay:1.2s}.a4{animation-delay:1.8s}.a5{animation-delay:.9s}.a6{animation-delay:2.1s}.a7{animation-delay:3s}
+@keyframes act{0%,30%,100%{fill:#FAFAF7}45%{fill:#FDBA74}}
+.ripple{transform-box:fill-box;transform-origin:center;animation:ripple 2.8s ease-out infinite}.r2{animation-delay:1.4s}
+@keyframes ripple{0%{transform:scale(1);opacity:.6}100%{transform:scale(2.2);opacity:0}}
+.chip{transform-box:fill-box;animation:chip 6s ease-in-out infinite}.k2{animation-delay:-2s}.k3{animation-delay:-4s}
+@keyframes chip{0%,100%{transform:translateX(0)}50%{transform:translateX(-4px)}}
+.spin-in{transform-box:view-box;transform-origin:280px 280px;animation:spin 70s linear infinite}
+.spin-in .up{transform-box:fill-box;transform-origin:center;animation:spin 70s linear infinite reverse}
+.spin-out{transform-box:view-box;transform-origin:280px 280px;animation:spin 110s linear infinite reverse}
+.spin-out .up2{transform-box:fill-box;transform-origin:center;animation:spin 110s linear infinite}
+g.act>circle:first-child{fill:inherit}
+@keyframes spin{to{transform:rotate(360deg)}}
+.o1{animation-delay:0s}.o2{animation-delay:1.2s}.o3{animation-delay:2.4s}
+.lk{opacity:.15;animation:lk 3.2s ease-in-out infinite}.l2{animation-delay:.8s}.l3{animation-delay:1.6s}.l4{animation-delay:2.4s}
+@keyframes lk{0%,100%{opacity:.12}40%{opacity:.9}}
+.card{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 32px -20px rgba(17,19,24,.35);border-color:#D6D3CA}
+.btn-p{transition:transform .2s ease,background .2s ease}.btn-p:hover{background:#2A2D35;color:#FFFFFF}
+.btn-g{transition:background .2s ease}.btn-g:hover{background:#F3F2EE;color:#111318}
+.ra-scan{animation:ra-scan 3.2s ease-in-out infinite alternate}
+@keyframes ra-scan{from{transform:translateY(0)}to{transform:translateY(86px)}}
+.ra-draw{stroke-dasharray:100;stroke-dashoffset:100;animation:ra-draw 3s ease-in-out infinite}
+@keyframes ra-draw{0%{stroke-dashoffset:100}60%,100%{stroke-dashoffset:0}}
+.ra-pulse{transform-box:fill-box;transform-origin:center;animation:ra-pulse 1.8s ease-in-out infinite}
+@keyframes ra-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+.ra-cycle{opacity:0;animation:ra-cycle 6s infinite}
+.ra-c2{animation-delay:2s}.ra-c3{animation-delay:4s}
+@keyframes ra-cycle{0%{opacity:0}6%,30%{opacity:1}36%,100%{opacity:0}}
+.ra-left{animation:ra-left 3s ease-in-out infinite alternate}
+.ra-right{animation:ra-right 3s ease-in-out infinite alternate}
+@keyframes ra-left{from{transform:translateX(0)}to{transform:translateX(30px)}}
+@keyframes ra-right{from{transform:translateX(0)}to{transform:translateX(-30px)}}
+.ra-bar{transform-box:fill-box;transform-origin:bottom;animation:ra-bar 2.6s ease-in-out infinite alternate}
+.ra-b2{animation-delay:.3s}.ra-b3{animation-delay:.6s}.ra-b4{animation-delay:.9s}.ra-b5{animation-delay:1.2s}
+@keyframes ra-bar{from{transform:scaleY(.35)}to{transform:scaleY(1)}}
+.type{transform-box:fill-box;transform-origin:left;animation:type 4s steps(14) infinite}
+.t2{animation-delay:.6s}.t3{animation-delay:1.2s}.t4{animation-delay:1.8s}
+@keyframes type{0%{transform:scaleX(0)}45%,100%{transform:scaleX(1)}}
+.caret{animation:blink 1s steps(1) infinite}
+.talk{opacity:0;animation:talk 6s infinite}.k2{animation-delay:2s}.k3{animation-delay:4s}
+@keyframes talk{0%{opacity:0;transform:translateY(4px)}8%,30%{opacity:1;transform:none}36%,100%{opacity:0}}
+.slide{animation:slide 6s ease-in-out infinite}
+@keyframes slide{0%,45%{transform:translateX(0)}50%,95%{transform:translateX(-4px)}100%{transform:translateX(0)}}
+@supports (animation-timeline: view()){.sr{animation:rv-up linear both;animation-timeline:view();animation-range:entry 0% cover 22%}}
+@media (prefers-reduced-motion: reduce){.rv,.sr{animation:none;opacity:1;transform:none}.sig,.node-p,.float,.cm,.ct,.act,.ripple,.chip,.spin-in,.spin-out,.up,.up2,.lk,.dot,.mq,.orb,.wave,.ra-scan,.ra-draw,.ra-pulse,.ra-left,.ra-right,.ra-bar,.type,.caret,.slide{animation:none}.sig{stroke-dasharray:none;opacity:.5}.cm{opacity:0}.ct{stroke-dasharray:none;opacity:.25}.ra-draw{stroke-dashoffset:0}.ra-cycle,.talk{animation:none}.ra-c1,.k1{opacity:1}}
+html{scroll-behavior:smooth}
+@keyframes rv-up{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes drift{to{background-position:220px 110px}}
+.ph::before{animation:drift 60s linear infinite}
+.ph h1::after{content:"";display:block;width:56px;height:3px;border-radius:2px;background:#C2410C;margin-top:22px;transform-origin:left;animation:grow .9s .6s cubic-bezier(.2,.7,.2,1) both}
+.arw{display:inline-block;transition:translate .25s ease}
+a:hover .arw,.card:hover .arw{translate:5px 0}
+a{transition:color .2s ease}
+.btn-p svg,.btn-g svg{transition:translate .25s ease}.btn-p:hover svg,.btn-g:hover svg{translate:4px 0}
+.card img{transition:transform .5s cubic-bezier(.2,.7,.2,1)}.card:hover img{transform:scale(1.06)}
+.row{transition:background .25s ease,padding .25s ease}.row:hover{background:#F3F2EE;padding-left:12px;padding-right:12px}
+details p{animation:fade-in .35s ease}
+details summary span:first-child{transition:color .2s ease}details summary:hover span:first-child{color:#C2410C}
+.play span{transition:transform .3s cubic-bezier(.2,.7,.2,1)}.play:hover span{transform:scale(1.12)}
+.logo-tile{transition:translate .3s ease,border-color .25s ease,box-shadow .3s ease}.logo-tile:hover{translate:0 -3px;box-shadow:0 10px 24px -18px rgba(17,19,24,.4)}
+@supports (animation-timeline: view()){
+.card,.row,.logo-strip-item{animation:rv-up linear both;animation-timeline:view();animation-range:entry 0% cover 18%}
+.sr .card,.sr .row{animation-range:entry 5% cover 22%}
+h2{animation:rv-up linear both;animation-timeline:view();animation-range:entry 0% cover 15%}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.ph::before,.ph h1::after,.card,.row,h2,details p{animation:none!important}.ph h1::after{transform:none}.card:hover img,.play:hover span{transform:none}.row:hover{padding-left:0;padding-right:0}}
+.site{background-color:#FAFAF7;background-image:radial-gradient(900px 620px at 100% 0%,rgba(194,65,12,.08),transparent 60%),radial-gradient(820px 720px at 0% 38%,rgba(55,48,163,.05),transparent 62%),radial-gradient(900px 700px at 100% 72%,rgba(14,116,144,.05),transparent 62%),radial-gradient(700px 520px at 10% 100%,rgba(194,65,12,.05),transparent 62%),linear-gradient(rgba(17,19,24,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(17,19,24,.035) 1px,transparent 1px);background-size:auto,auto,auto,auto,48px 48px,48px 48px}
+.ph{background:transparent!important}
+.ph::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-radial-gradient(circle at 90% 18%,transparent 0 54px,rgba(194,65,12,.09) 54px 55px);-webkit-mask-image:radial-gradient(circle at 90% 18%,#000 0,#000 18%,transparent 52%);mask-image:radial-gradient(circle at 90% 18%,#000 0,#000 18%,transparent 52%);animation:breathe 9s ease-in-out infinite;transform-origin:90% 18%}
+@keyframes breathe{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.04);opacity:1}}
+.band{position:relative;overflow:hidden}
+.band::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;border:1px dashed rgba(17,19,24,.12);pointer-events:none;animation:spin 120s linear infinite}
+.band::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;border:1px solid rgba(194,65,12,.12);pointer-events:none}
+.band.r::before{right:-220px;top:-180px}.band.r::after{right:-130px;top:-90px}
+.band.l::before{left:-240px;bottom:-200px}.band.l::after{left:-150px;bottom:-110px}
+.band>*{position:relative}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ph.nr::after{display:none}
+@media (prefers-reduced-motion: reduce){.ph::after,.band::before{animation:none}}
 
-  <!-- Favicons -->
-  <link href="assets/img/icon/website-logo.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
-    rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+body{margin:0}
+nav a{transition:color .2s ease,border-color .25s ease,background .2s ease}
+nav a:hover{color:#111318!important;border-bottom-color:#D6D3CA!important}
+nav a:last-child:hover{background:#2A2D35!important;color:#FFFFFF!important;border-bottom-color:transparent!important}
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
 
-  <!-- =======================================================
-  * Template Name: Ninestars - v4.8.0
-  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+body{margin:0}
+footer a{transition:color .2s ease}
+footer nav a:hover,footer div a:hover{color:#C2410C!important}
+
+</style>
 </head>
-
 <body>
-  <!--POPUP
-	<div class="popup">
-		<button id="close">&times;</button>
-		<h1></h1>
-		<p></p>
-		<a href="#"></a>
-	</div>
-	-->
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top  d-flex align-items-center">
-
-    <div class="container d-flex align-items-center m-0 justify-content-between">
-
-      <div class="logo m-0">
-        <!-- <h1 class="text-light"><a href="index.html"><span>CORD.ai</span></a></h1> -->
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a><img id = "cordimg" src="assets/img/icon/Logo Medium.png" alt="cordai-logo" class="img-fluid"></a> -->
-
-
-        <h1 class="text-light"><a><img id="cordimg" src="assets/img/icon/Logo_Medium.png" alt="cordai-logo"
-              class="img-fluid"> CORD.ai </a></h1>
-      </div>
-
-      <nav id="navbar" class="navbar text-dark">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html#about">About Us</a></li>
-          <!-- <li><a class="nav-link scrollto" href="projects.html">Our work</a></li> -->
-          <li><a class="nav-link scrollto" href="teams.html">Team</a></li>
-
-
-          <li><a href="blogs.html">Blogs</a></li>
-
-
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href=screening_task.html>Screening Task</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center text-dark">
-  <div class="container-fluid px-0 m-0">
-    <div class="row align-items-center mx-0">
-      <div class="col-lg-7 col-md-7 main-heading px-4">
-        <h1 class="gradient-text floating-text" id="floatingText">A Collaborative Open Research in Deep Learning</h1>
-        <p>An Inclusive AI research community for all.</p>
-        <a href="https://t.co/I9bSrPCA1x" class="btn-get-started scrollto btn btn-primary">Join our community</a>
-      </div>
-      <div class="col-lg-5 col-md-5 p-0" id="lottie-container">
-        <!-- Lottie container or image here -->
-      </div>
-    </div>
-  </div>
-</section><!-- End Hero -->
-
-
-  <div id="advertisement-container"></div>
-
-  <main id="main" class="text-dark">
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about ">
-      <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-lg-5 d-flex align-items-center justify-content-center about-img">
-            <!-- <img src="assets/img/about-img.svg" class="img-fluid" alt="" data-aos="zoom-in"> -->
-          </div>
-          <div class="col-lg-6 pt-5 pt-lg-0">
-            <h3 class="bold-text" data-aos="fade-up">Learn it, Apply it, Spread the World.</h3 class="bold-text">
-            <p data-aos="fade-up" data-aos-delay="100">
-              We are an inclusive open AI research platform empowering students and folks to learn
-              and collaborate with each other in AI R&D. Here's what we do.
-            </p>
-            <div class="row">
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <i class="bx bx-receipt"></i>
-                <h4 class="bold-text">Open Source</h4 class="bold-text">
-                <p>We empower folks to contribute to different open source AI projects and engage with different other
-                  communities.</p>
-              </div>
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <i class="bx bx-cube-alt"></i>
-                <h4 class="bold-text">AI Research</h4 class="bold-text">
-                <p>We motivate the community to get engaged with core AI research, innovate newer things and document it
-                  and publish it.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End About Section -->
-  </main>
-
-
-  <!-- Latest News section -->
-  <section id="services" class="services section-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Latest updates from CORD.ai</h2>
-        <p>Checkout our latest updates on twitter.</p>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6 col-lg-6 col-sm-12 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-          <div class="icon-box col-12" >
-            <blockquote class="twitter-tweet" >
-              <p lang="en" dir="ltr">Here&#39;s the complete schedule of <a
-                  href="https://t.co/2riCf8NC9w">https://t.co/2riCf8NC9w</a> first Symposium. Don&#39;t forget to
-                register and mark your google calendar<br>Note:- All timings are according to IST<br>We are very excited
-                to meet you all at Symposium&#39;23<br>Links will be shared on slack <a
-                  href="https://t.co/ACm1E3GSFr">https://t.co/ACm1E3GSFr</a> <a
-                  href="https://t.co/6yhUrrUxVw">pic.twitter.com/6yhUrrUxVw</a></p>&mdash; CORD.ai (@CRforAi) <a
-                href="https://twitter.com/CRforAi/status/1612861010997829632?ref_src=twsrc%5Etfw">January 10, 2023</a>
-            </blockquote>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-6 col-sm-12 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box col-12">
-            <blockquote class="twitter-tweet" >
-              <p lang="en" dir="ltr">We are excited to announce <a
-                  href="https://t.co/2riCf8NC9w">https://t.co/2riCf8NC9w</a> first Deep Learning Symposium, where core
-                members and researchers will come together to share their knowledge and experience in the field of deep
-                learning.<br>Register here - <a href="https://t.co/ACm1E3GSFr">https://t.co/ACm1E3GSFr</a><a
-                  href="https://twitter.com/hashtag/MachineLearning?src=hash&amp;ref_src=twsrc%5Etfw">#MachineLearning</a>
-                <a href="https://twitter.com/hashtag/AI?src=hash&amp;ref_src=twsrc%5Etfw">#AI</a> <a
-                  href="https://twitter.com/hashtag/community?src=hash&amp;ref_src=twsrc%5Etfw">#community</a> <a
-                  href="https://t.co/fzhagJ47ZZ">pic.twitter.com/fzhagJ47ZZ</a></p>&mdash; CORD.ai (@CRforAi) <a
-                href="https://twitter.com/CRforAi/status/1612700969325965318?ref_src=twsrc%5Etfw">January 10, 2023</a>
-            </blockquote>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div>
-        </div>
-
-
-
-
-      </div>
-
-    </div>
-
-  </section><!-- End of News Section -->
-
-
-
-  <!-- ======= Services Section ======= -->
-
-  <section id="services" class="services section-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>What we do?</h2>
-        <p>Check out the things we are involved in</p>
-      </div>
-
-      <div class="row">
-        <div class="col-md-5 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-          <div class="icon-box">
-            <div class="icon" id="icon-1">
-
-            </div>
-            <h4 class="title"><a href="">Projects</a></h4>
-            <p class="description">We develop different research intensive projects, implement
-              research papers and publish it in our official github repository.</p>
-          </div>
-        </div>
-
-        <div class="col-md-5 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box">
-            <div class="icon mb-5" id="icon-2">
-
-            </div>
-            <!-- <div class="mb-5"></div> -->
-            <h4 class="title"><a href="">Blogs</a></h4>
-            <p class="description">Our community members write blogs about different ML/DL topics and publish in our
-              blog website.</p>
-          </div>
-        </div>
-
-        <div class="col-md-5 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
-          <div class="icon-box">
-            <div class="icon" id="icon-3">
-
-            </div>
-            <div class="mb-5"></div>
-            <h4 class="title"><a href="">Reading groups</a></h4>
-            <p class="description">Members take tutorials, research paper reading / implementation sessions or show
-              case their projects. </p>
-          </div>
-        </div>
-
-        <!-- <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="">Collaborations</a></h4>
-              <p class="description">We collaborate with different universities to publish impactful papers under university professors.</p>
-            </div>
-          </div> -->
-
-      </div>
-
-    </div>
-
-  </section><!-- End Services Section -->
-
-
-
-
-
-
-  <!-- ======= F.A.Q Section ======= -->
-  <section id="faq" class="faq section-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>F.A.Q</h2>
-        <p>Frequently Asked Questions</p>
-      </div>
-
-      <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
-
-        <li>
-
-          <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">What this community is about? <i
-              class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-          <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-            <p>
-              This community is mainly about engaging folks from diverse technical background to come together and
-              collaborate on different
-              projects related to AI and Machine Learning.
-
-            </p>
-          </div>
-        </li>
-
-        <li>
-          <div data-bs-toggle="collapse" class="collapsed question" href="#faq2">What is the motivation behind this
-            community? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-          <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-            <p>
-
-              You can learn anything related to AI in online for free. You can read research papers from top AI labs
-              for free in arxiv.
-              This is one of the best times to get started in AI research. But there's a caveat, good quality research
-              always results from a group of people.
-              It's hard to find a right partner for your research, especially when you're not from a research
-              university. So our community helps you to find right colloborators for your research.
-
-            </p>
-          </div>
-        </li>
-
-        <li>
-
-          <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Can an absolute beginner can join
-            this community? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
-          </div>
-          <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-            <p>
-              Yes Absolutely. Anyone who is interested to learn about AI and engage in different types of project are
-              welcomed to this platform.
-
-            </p>
-          </div>
-        </li>
-
-        <li>
-
-          <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Can I get a partner for kaggle
-            competitions? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
-          </div>
-          <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-            <p>
-              Yes. Members are allowed to collaborate on different competitions. It is not only limited to kaggle but
-              other competitions too.
-
-            </p>
-          </div>
-        </li>
-
-        <li>
-          <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Can I get research opportunities from
-            here? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-          <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-            <p>
-              Yes. Our core members are currently engaged in different research projects that involves professors from
-              different universities. So members gets an oppurtinuty to
-              collaborate with them and hence getting national/international remote research opportunities.
-
-            </p>
-          </div>
-        </li>
-
-        <li>
-          <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Should I expect to get a study buddy
-            here?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-          <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-            <p>
-
-              Yes absolutely. Afterall this is a place where like minded people hang out.
-
-            </p>
-          </div>
-        </li>
-
-        <li>
-          <div data-bs-toggle="collapse" href="#faq7" class="collapsed question">What other opportunities can I get
-            from this platform? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
-          </div>
-          <div id="faq7" class="collapse" data-bs-parent=".faq-list">
-            <p>
-
-              The most important thing that you can get out of this community is Learning. You can also get to meet
-              like-minded people,
-              involve in doing high-quality research and publishing it, applying for patents with our help, and also
-              getting referrals.
-
-            </p>
-          </div>
-        </li>
-
-        <li>
-          <div data-bs-toggle="collapse" href="#faq8" class="collapsed question">Do I need to have a solid
-            mathematical background to get started in AI research? <i class="bi bi-chevron-down icon-show"></i><i
-              class="bi bi-chevron-up icon-close"></i></div>
-          <div id="faq8" class="collapse" data-bs-parent=".faq-list">
-
-            <p>It helps, but not required when you're starting out. You can also learn the required math on the fly.
-              It also depends on the research project that you're involved in, For eg., NLP research projects doesn't
-              require much math
-              but projects on Optimization algorithms require a great deal of math. We also have a #math-for-ml slack
-              channel, where you can ask doubts,
-              and find a person to discuss topics regarding math.
-            </p>
-
-          </div>
-        </li>
-      </ul>
-
-    </div>
-  </section><!-- End F.A.Q Section -->
-
-
-  <!-- ======= Contact Us Section ======= -->
-  <section id="contact" class="contact">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Contact Us</h2>
-        <p>Contact us to get started</p>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col align-self-center">
-            <!-- contact form -->
-            <form id="contactForm">
-              <!-- name -->
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="name" name="name" class="form-control" id="name" placeholder="Enter your name" />
-              </div>
-
-              <!-- email -->
-              <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" />
-              </div>
-
-              <!-- subject -->
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" name="subject" class="form-control" id="subject" placeholder="Enter email subject" />
-              </div>
-
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="5"></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-dark btn-lg ">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <!-- bootstrap js -->
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
-
-      <!-- Email JS -->
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-      <script type="text/javascript">
-        (function () {
-          emailjs.init("UxUrHM0ONT-rWIqDn");
-        })();
-      </script>
-      <script>
-        // listen to the form submission
-        document
-          .getElementById("contactForm")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const serviceID = "service_5su2afb";
-            const templateID = "template_7uf1czp";
-
-            // send the email here
-            emailjs.sendForm(serviceID, templateID, this).then(
-              (response) => {
-                console.log("SUCCESS!", response.status, response.text);
-                alert("SUCCESS!");
-              },
-              (error) => {
-                console.log("FAILED...", error);
-                alert("FAILED...", error);
-              }
-            );
-          });
-      </script>
-
-
-
-
-    </div>
-  </section><!-- End Contact Us Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6 news-letter">
-            <h4 class="text-light">Join Our Newsletter</h4>
-            <p class="text-light">Get updates on blogs, published paper, posts and sessions.</p>
-
-            <!-- TODO: METHOD TO BE DONE -->
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>CORD.ai</h4>
-            <p>
-              Pune, Maharashtra<br>
-              India, IN 411046<br><br><br>
-              <strong>Email:</strong> social.cordai@gmail.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html#about">About us</a></li>
-              <!-- <li><i class="bx bx-chevron-right"></i> <a href="projects.html">Our work</a></li> -->
-              <li><i class="bx bx-chevron-right"></i> <a href="teams.html">Team</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Follow us on our socials to get daily updates from our community.</p>
-            <div class="social-links mt-3">
-              <a href="https://www.linkedin.com/company/cord-ai1/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              <a href="https://twitter.com/CRforAi" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="https://github.com/CORD-ai" class="github"><i class="bx bxl-github"></i></a>
-              <a href="https://www.facebook.com/CRforAi" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="https://www.youtube.com/channel/UCMr-bQG5XKLPOR5nhJZbQ5Q" class="youtube"><i
-                  class="bx bxl-youtube"></i></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container py-4">
-      <div class="copyright">
-        &copy; Copyright <strong><span>CORD.ai</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/script.js"></script>
-  <script src="assets/vendor/script.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+<div class="site" style="font-family: Inter, system-ui, sans-serif; color: #111318; background-color: #FAFAF7; font-size: 16px; line-height: 1.6">
+
+
+<header style="font-family: Inter, system-ui, sans-serif; color: #111318; background: rgba(250,250,247,0.82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid #E7E5DF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; min-height: 56px">
+<a href="/" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #111318; min-height: 44px">
+<img src="/assets/site/7eeb4da85ca34c05df0244302b764256.png" alt="" style="width: 40px; height: 34px; object-fit: contain">
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.01em">CORD.ai</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px">
+
+<a href="/" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none; font-size: 15px; font-weight: 500; border-bottom: 2px solid #C2410C; color: #111318">Home</a>
+
+<a href="/team.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none; font-size: 15px; font-weight: 500; border-bottom: 2px solid transparent; color: #5B616B">Team</a>
+
+<a href="/research.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none; font-size: 15px; font-weight: 500; border-bottom: 2px solid transparent; color: #5B616B">Research</a>
+
+<a href="https://www.youtube.com/@cordai530" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none; font-size: 15px; font-weight: 500; border-bottom: 2px solid transparent; color: #5B616B">Watch our sessions</a>
+
+<a href="/join.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; margin-left: 8px; background: #111318; color: #FFFFFF; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 15px">Join us</a>
+</nav>
+</div>
+</header>
+
+
+<section class="ph nr" style="overflow: hidden; border-bottom: 1px solid #E7E5DF">
+<div style="position: relative; max-width: 1200px; margin: 0 auto; padding: 104px 32px 64px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+<div class="rv d1" style="display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5B616B"><span class="dot" style="width: 6px; height: 6px; border-radius: 50%; background: #C2410C"></span>Open AI research community</div>
+<h1 class="rv d2" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(2.6rem, 5.4vw, 4.75rem); line-height: 1.02; letter-spacing: -0.03em">A Collaborative <span style="color: #C2410C">Open Research</span> in Deep Learning</h1>
+<p class="rv d3" style="margin: 0; font-size: 20px; color: #5B616B; max-width: 560px">An inclusive AI research community for all. Learn it, apply it, spread it, together with people who want to do the same.</p>
+<div class="rv d4" style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="btn-p" href="/join.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 26px; background: #111318; color: #FFFFFF; text-decoration: none; border-radius: 10px; font-weight: 600">Join our community<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="btn-g" href="/research.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border: 1px solid #111318; color: #111318; text-decoration: none; border-radius: 10px; font-weight: 600">See our research</a>
+</div>
+</div>
+<div class="rv d5" style="flex: 1 1 380px; min-width: 0; position: relative; display: flex; flex-direction: column; align-items: center; gap: 8px">
+<svg viewBox="0 0 560 560" width="100%" style="max-width: 520px; height: auto" role="img" aria-label="Members collaborating at the centre, connected to AI domains around them and releasing open code, datasets and models">
+<circle cx="280" cy="280" r="228" fill="none" stroke="#E2DFD7" stroke-width="1" stroke-dasharray="2 6"></circle>
+<circle cx="280" cy="280" r="135" fill="none" stroke="#E2DFD7" stroke-width="1"></circle>
+<g class="spin-out">
+<path class="ct o1" d="M333.7 249.0L456.7 178.0" pathLength="100" fill="none" stroke="#C2410C" stroke-width="1.6" stroke-linecap="round"></path>
+<g class="up2"><rect x="439.5" y="149.0" width="76.0" height="34" rx="17" fill="#111318"></rect><path d="M453.5 162.0l-4 4 4 4M461.5 162.0l4 4-4 4" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path><text x="471.5" y="170.5" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px" fill="#FFFFFF">Code</text></g>
+<path class="ct o2" d="M280.0 342.0L280.0 484.0" pathLength="100" fill="none" stroke="#C2410C" stroke-width="1.6" stroke-linecap="round"></path>
+<g class="up2"><rect x="226.0" y="491.0" width="108.0" height="34" rx="17" fill="#111318"></rect><ellipse cx="244.0" cy="504.0" rx="6" ry="2.6" fill="none" stroke="#FFFFFF" stroke-width="1.6"></ellipse><path d="M238.0 504.0v8c0 1.5 2.7 2.6 6 2.6s6-1.1 6-2.6v-8" fill="none" stroke="#FFFFFF" stroke-width="1.6"></path><text x="258.0" y="512.5" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px" fill="#FFFFFF">Datasets</text></g>
+<path class="ct o3" d="M226.3 249.0L103.3 178.0" pathLength="100" fill="none" stroke="#C2410C" stroke-width="1.6" stroke-linecap="round"></path>
+<g class="up2"><rect x="36.5" y="149.0" width="92.0" height="34" rx="17" fill="#111318"></rect><path d="M54.5 158.0l7 4v8l-7 4-7-4v-8zM47.5 162.0l7 4 7-4M54.5 166.0v8" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"></path><text x="68.5" y="170.5" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px" fill="#FFFFFF">Models</text></g>
+</g>
+<g class="spin-in">
+<path d="M280.0 218.0L280.0 165.0" stroke="#E2DFD7" stroke-width="1.2"></path>
+<path class="cm c1" d="M280.0 218.0L280.0 165.0" pathLength="100" fill="none" stroke="#C2410C" stroke-width="6" stroke-linecap="round"></path>
+<g class="up"><rect x="238.4" y="129.0" width="83.2" height="32" rx="16" fill="#FFFFFF" stroke="#E2DFD7" stroke-width="1.2"></rect><circle cx="253.4" cy="145.0" r="3.5" fill="#C2410C"></circle><text x="263.4" y="149.5" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px" fill="#111318">Vision</text></g>
+<path d="M333.7 249.0L379.6 222.5" stroke="#E2DFD7" stroke-width="1.2"></path>
+<path class="cm c2" d="M379.6 222.5L333.7 249.0" pathLength="100" fill="none" stroke="#C2410C" stroke-width="6" stroke-linecap="round"></path>
+<g class="up"><rect x="347.1" y="196.5" width="99.6" height="32" rx="16" fill="#FFFFFF" stroke="#E2DFD7" stroke-width="1.2"></rect><circle cx="362.1" cy="212.5" r="3.5" fill="#111318"></circle><text x="372.1" y="217.0" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px" fill="#111318">Language</text></g>
+<path d="M333.7 311.0L379.6 337.5" stroke="#E2DFD7" stroke-width="1.2"></path>
+<path class="cm c3" d="M333.7 311.0L379.6 337.5" pathLength="100" fill="none" stroke="#C2410C" stroke-width="6" stroke-linecap="round"></path>
+<g class="up"><rect x="338.9" y="331.5" width="116.0" height="32" rx="16" fill="#FFFFFF" stroke="#E2DFD7" stroke-width="1.2"></rect><circle cx="353.9" cy="347.5" r="3.5" fill="#C2410C"></circle><text x="363.9" y="352.0" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px" fill="#111318">Medical AI</text></g>
+<path d="M280.0 342.0L280.0 395.0" stroke="#E2DFD7" stroke-width="1.2"></path>
+<path class="cm c4" d="M280.0 395.0L280.0 342.0" pathLength="100" fill="none" stroke="#C2410C" stroke-width="6" stroke-linecap="round"></path>
+<g class="up"><rect x="238.4" y="399.0" width="83.2" height="32" rx="16" fill="#FFFFFF" stroke="#E2DFD7" stroke-width="1.2"></rect><circle cx="253.4" cy="415.0" r="3.5" fill="#111318"></circle><text x="263.4" y="419.5" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px" fill="#111318">Graphs</text></g>
+<path d="M226.3 311.0L180.4 337.5" stroke="#E2DFD7" stroke-width="1.2"></path>
+<path class="cm c5" d="M226.3 311.0L180.4 337.5" pathLength="100" fill="none" stroke="#C2410C" stroke-width="6" stroke-linecap="round"></path>
+<g class="up"><rect x="109.2" y="331.5" width="107.8" height="32" rx="16" fill="#FFFFFF" stroke="#E2DFD7" stroke-width="1.2"></rect><circle cx="124.2" cy="347.5" r="3.5" fill="#C2410C"></circle><text x="134.2" y="352.0" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px" fill="#111318">Indic NLP</text></g>
+<path d="M226.3 249.0L180.4 222.5" stroke="#E2DFD7" stroke-width="1.2"></path>
+<path class="cm c6" d="M180.4 222.5L226.3 249.0" pathLength="100" fill="none" stroke="#C2410C" stroke-width="6" stroke-linecap="round"></path>
+<g class="up"><rect x="105.1" y="196.5" width="116.0" height="32" rx="16" fill="#FFFFFF" stroke="#E2DFD7" stroke-width="1.2"></rect><circle cx="120.1" cy="212.5" r="3.5" fill="#111318"></circle><text x="130.1" y="217.0" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px" fill="#111318">Evaluation</text></g>
+</g>
+<circle class="ripple" cx="280" cy="280" r="58" fill="none" stroke="#C2410C" stroke-width="1"></circle>
+<circle cx="280" cy="280" r="58" fill="#FFFFFF" stroke="#E2DFD7" stroke-width="1.2"></circle>
+<path class="lk l1" d="M280.0 250.0L308.5 270.7" stroke="#C2410C" stroke-width="1.4"></path>
+<path class="lk l2" d="M308.5 270.7L297.6 304.3" stroke="#C2410C" stroke-width="1.4"></path>
+<path class="lk l3" d="M297.6 304.3L262.4 304.3" stroke="#C2410C" stroke-width="1.4"></path>
+<path class="lk l4" d="M262.4 304.3L251.5 270.7" stroke="#C2410C" stroke-width="1.4"></path>
+<path class="lk l1" d="M251.5 270.7L280.0 250.0" stroke="#C2410C" stroke-width="1.4"></path>
+<path class="lk l2" d="M280.0 250.0L297.6 304.3" stroke="#C2410C" stroke-width="1.4"></path>
+<path class="lk l3" d="M308.5 270.7L262.4 304.3" stroke="#C2410C" stroke-width="1.4"></path>
+<path class="lk l4" d="M297.6 304.3L251.5 270.7" stroke="#C2410C" stroke-width="1.4"></path>
+<g class="act a1"><circle cx="280.0" cy="250.0" r="9" fill="#FAFAF7" stroke="#111318" stroke-width="1.5"></circle><circle cx="280.0" cy="247.5" r="2.6" fill="#111318"></circle><path d="M275.5 255.0a4.5 4 0 0 1 9 0" fill="#111318"></path></g><g class="act a2"><circle cx="308.5" cy="270.7" r="9" fill="#FAFAF7" stroke="#111318" stroke-width="1.5"></circle><circle cx="308.5" cy="268.2" r="2.6" fill="#111318"></circle><path d="M304.0 275.7a4.5 4 0 0 1 9 0" fill="#111318"></path></g><g class="act a3"><circle cx="297.6" cy="304.3" r="9" fill="#FAFAF7" stroke="#111318" stroke-width="1.5"></circle><circle cx="297.6" cy="301.8" r="2.6" fill="#111318"></circle><path d="M293.1 309.3a4.5 4 0 0 1 9 0" fill="#111318"></path></g><g class="act a4"><circle cx="262.4" cy="304.3" r="9" fill="#FAFAF7" stroke="#111318" stroke-width="1.5"></circle><circle cx="262.4" cy="301.8" r="2.6" fill="#111318"></circle><path d="M257.9 309.3a4.5 4 0 0 1 9 0" fill="#111318"></path></g><g class="act a5"><circle cx="251.5" cy="270.7" r="9" fill="#FAFAF7" stroke="#111318" stroke-width="1.5"></circle><circle cx="251.5" cy="268.2" r="2.6" fill="#111318"></circle><path d="M247.0 275.7a4.5 4 0 0 1 9 0" fill="#111318"></path></g>
+<text x="280" y="362" text-anchor="middle" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em" fill="#5B616B">COMMUNITY</text>
+</svg>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5B616B"><span>Collaborate</span><span aria-hidden="true" style="color: #C2410C">→</span><span>across AI domains</span><span aria-hidden="true" style="color: #C2410C">→</span><span>release it openly</span></div>
+</div>
+</div>
+<div class="rv d5" style="position: relative; padding: 8px 0 56px; display: flex; flex-direction: column; gap: 22px">
+<div style="text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5B616B">Our members research and build at</div>
+<div style="overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)">
+<div class="mq">
+
+<div class="logo-tile" style="flex: 0 0 240px; width: 240px; height: 112px; box-sizing: border-box; padding: 14px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E7E5DF">
+<img src="/assets/site/a054bf83d62630718e94ce1486d32e42.png" alt="Carnegie Mellon University" style="height: 52px; width: auto; max-width: 196px; object-fit: contain">
+<span style="white-space: nowrap; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 14px; line-height: 1.2; color: #111318">Carnegie Mellon University</span>
+</div>
+
+<div class="logo-tile" style="flex: 0 0 240px; width: 240px; height: 112px; box-sizing: border-box; padding: 14px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E7E5DF">
+<img src="/assets/site/2518224c0b093be5f4a1605f95988a81.png" alt="Stanford University" style="height: 52px; width: auto; max-width: 196px; object-fit: contain">
+<span style="white-space: nowrap; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 14px; line-height: 1.2; color: #111318">Stanford University</span>
+</div>
+
+<div class="logo-tile" style="flex: 0 0 240px; width: 240px; height: 112px; box-sizing: border-box; padding: 14px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E7E5DF">
+<img src="/assets/site/cb4cbf90e67a5c902ac57daa53d8365e.png" alt="Columbia University" style="height: 76px; width: auto; max-width: 196px; object-fit: contain">
+
+</div>
+
+<div class="logo-tile" style="flex: 0 0 240px; width: 240px; height: 112px; box-sizing: border-box; padding: 14px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E7E5DF">
+<img src="/assets/site/45a85300801a2fdf20322e3757fbde81.png" alt="Google" style="height: 52px; width: auto; max-width: 196px; object-fit: contain">
+<span style="white-space: nowrap; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 14px; line-height: 1.2; color: #111318">Google</span>
+</div>
+
+<div class="logo-tile" style="flex: 0 0 240px; width: 240px; height: 112px; box-sizing: border-box; padding: 14px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E7E5DF">
+<img src="/assets/site/c0b2c1125600c2950a0d83ded67dca3f.png" alt="MBZUAI" style="height: 76px; width: auto; max-width: 196px; object-fit: contain">
+
+</div>
+
+<div class="logo-tile" style="flex: 0 0 240px; width: 240px; height: 112px; box-sizing: border-box; padding: 14px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E7E5DF">
+<img src="/assets/site/3000a2a4298bbe367019e2f9620fc8d0.png" alt="Virginia Tech" style="height: 52px; width: auto; max-width: 196px; object-fit: contain">
+<span style="white-space: nowrap; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 14px; line-height: 1.2; color: #111318">Virginia Tech</span>
+</div>
+
+<div class="logo-tile" style="flex: 0 0 240px; width: 240px; height: 112px; box-sizing: border-box; padding: 14px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E7E5DF">
+<img src="/assets/site/aaa99aff0c91a30723b369a95bce6641.png" alt="Queen Mary University of London" style="height: 76px; width: auto; max-width: 196px; object-fit: contain">
+
+</div>
+
+<div class="logo-tile" style="flex: 0 0 240px; width: 240px; height: 112px; box-sizing: border-box; padding: 14px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E7E5DF">
+<img src="/assets/site/a054bf83d62630718e94ce1486d32e42.png" alt="Carnegie Mellon University" style="height: 52px; width: auto; max-width: 196px; object-fit: contain">
+<span style="white-space: nowrap; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 14px; line-height: 1.2; color: #111318">Carnegie Mellon University</span>
+</div>
+
+<div class="logo-tile" style="flex: 0 0 240px; width: 240px; height: 112px; box-sizing: border-box; padding: 14px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E7E5DF">
+<img src="/assets/site/2518224c0b093be5f4a1605f95988a81.png" alt="Stanford University" style="height: 52px; width: auto; max-width: 196px; object-fit: contain">
+<span style="white-space: nowrap; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 14px; line-height: 1.2; color: #111318">Stanford University</span>
+</div>
+
+<div class="logo-tile" style="flex: 0 0 240px; width: 240px; height: 112px; box-sizing: border-box; padding: 14px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E7E5DF">
+<img src="/assets/site/cb4cbf90e67a5c902ac57daa53d8365e.png" alt="Columbia University" style="height: 76px; width: auto; max-width: 196px; object-fit: contain">
+
+</div>
+
+<div class="logo-tile" style="flex: 0 0 240px; width: 240px; height: 112px; box-sizing: border-box; padding: 14px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E7E5DF">
+<img src="/assets/site/45a85300801a2fdf20322e3757fbde81.png" alt="Google" style="height: 52px; width: auto; max-width: 196px; object-fit: contain">
+<span style="white-space: nowrap; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 14px; line-height: 1.2; color: #111318">Google</span>
+</div>
+
+<div class="logo-tile" style="flex: 0 0 240px; width: 240px; height: 112px; box-sizing: border-box; padding: 14px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E7E5DF">
+<img src="/assets/site/c0b2c1125600c2950a0d83ded67dca3f.png" alt="MBZUAI" style="height: 76px; width: auto; max-width: 196px; object-fit: contain">
+
+</div>
+
+<div class="logo-tile" style="flex: 0 0 240px; width: 240px; height: 112px; box-sizing: border-box; padding: 14px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E7E5DF">
+<img src="/assets/site/3000a2a4298bbe367019e2f9620fc8d0.png" alt="Virginia Tech" style="height: 52px; width: auto; max-width: 196px; object-fit: contain">
+<span style="white-space: nowrap; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 14px; line-height: 1.2; color: #111318">Virginia Tech</span>
+</div>
+
+<div class="logo-tile" style="flex: 0 0 240px; width: 240px; height: 112px; box-sizing: border-box; padding: 14px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E7E5DF">
+<img src="/assets/site/aaa99aff0c91a30723b369a95bce6641.png" alt="Queen Mary University of London" style="height: 76px; width: auto; max-width: 196px; object-fit: contain">
+
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<section id="research-areas" class="band r" style="border-bottom: 1px solid #E7E5DF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 104px 32px; display: flex; flex-direction: column; gap: 44px">
+<div class="sr" style="display: flex; flex-wrap: wrap; gap: 16px 48px; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+<div style="display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5B616B"><span class="dot" style="width: 6px; height: 6px; border-radius: 50%; background: #C2410C"></span>Research areas</div>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(2rem, 3.4vw, 2.75rem); line-height: 1.08; letter-spacing: -0.02em">Where we work</h2>
+<p style="margin: 0; color: #5B616B; font-size: 18px">Fast-moving corners of AI where our members are publishing right now.</p>
+</div>
+</div>
+<div class="sr" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 24px">
+
+<article class="card" style="border: 1px solid #E7E5DF; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: #FFFFFF">
+<div style="background: #F3F2EE; border-bottom: 1px solid #E7E5DF; padding: 20px; display: flex; justify-content: center">
+<svg viewBox="0 0 240 120" width="100%" style="max-width: 280px; height: auto" aria-hidden="true">
+<rect x="20" y="14" width="112" height="92" rx="8" fill="#FFFFFF" stroke="#111318" stroke-width="2"></rect>
+<path d="M28 96 62 56l22 24 14-14 26 30Z" fill="#E7E5DF"></path>
+<circle cx="104" cy="38" r="9" fill="#FDBA74"></circle>
+<rect class="ra-scan" x="22" y="16" width="108" height="3" fill="#C2410C" opacity="0.85"></rect>
+<rect x="150" y="34" width="70" height="10" rx="5" fill="#111318"></rect>
+<rect x="150" y="54" width="54" height="10" rx="5" fill="#C9C9C3"></rect>
+<rect x="150" y="74" width="62" height="10" rx="5" fill="#C9C9C3"></rect>
+</svg>
+</div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600">Vision-language grounding</h3>
+<p style="margin: 0; color: #5B616B">Do VLMs actually look at the image? Counterfactual tests that separate visual evidence from language shortcuts.</p>
+</div>
+</article>
+
+<article class="card" style="border: 1px solid #E7E5DF; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: #FFFFFF">
+<div style="background: #F3F2EE; border-bottom: 1px solid #E7E5DF; padding: 20px; display: flex; justify-content: center">
+<svg viewBox="0 0 240 120" width="100%" style="max-width: 280px; height: auto" aria-hidden="true">
+<rect x="14" y="14" width="212" height="92" rx="8" fill="#FFFFFF" stroke="#E7E5DF" stroke-width="2"></rect>
+<path d="M14 60h212M120 14v92" stroke="#F5F5F1" stroke-width="2"></path>
+<path class="ra-draw" d="M20 64h40l10-22 12 44 12-56 12 48 8-14h104" fill="none" stroke="#C2410C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="100"></path>
+<circle cx="205" cy="32" r="5" fill="#111318" class="ra-pulse"></circle>
+</svg>
+</div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600">Medical multimodal AI</h3>
+<p style="margin: 0; color: #5B616B">Reliable visual question answering for pathology and radiology, with training that penalises hallucination.</p>
+</div>
+</article>
+
+<article class="card" style="border: 1px solid #E7E5DF; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: #FFFFFF">
+<div style="background: #F3F2EE; border-bottom: 1px solid #E7E5DF; padding: 20px; display: flex; justify-content: center">
+<svg viewBox="0 0 240 120" width="100%" style="max-width: 280px; height: auto" aria-hidden="true">
+<rect x="30" y="24" width="180" height="72" rx="36" fill="#FFFFFF" stroke="#111318" stroke-width="2"></rect>
+<g style="font-family: 'Noto Sans Devanagari', 'Noto Sans Tamil', 'Noto Sans Kannada', sans-serif; font-weight: 600; font-size: 30px" fill="#C2410C" text-anchor="middle">
+<text class="ra-cycle ra-c1" x="120" y="71">भाषा</text>
+<text class="ra-cycle ra-c2" x="120" y="71">மொழி</text>
+<text class="ra-cycle ra-c3" x="120" y="71">ಭಾಷೆ</text>
+</g>
+</svg>
+</div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600">Indic &amp; low-resource NLP</h3>
+<p style="margin: 0; color: #5B616B">Datasets and models for languages the web underserves, from Indian languages to Hausa visual QA.</p>
+</div>
+</article>
+
+<article class="card" style="border: 1px solid #E7E5DF; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: #FFFFFF">
+<div style="background: #F3F2EE; border-bottom: 1px solid #E7E5DF; padding: 20px; display: flex; justify-content: center">
+<svg viewBox="0 0 240 120" width="100%" style="max-width: 280px; height: auto" aria-hidden="true">
+<path d="M40 60h160" stroke="#C9C9C3" stroke-width="2" stroke-dasharray="4 6"></path>
+<g class="ra-left"><circle cx="60" cy="60" r="24" fill="#111318"></circle><text x="60" y="66" text-anchor="middle" fill="#FFFFFF" style="font-family: 'JetBrains Mono', monospace; font-size: 14px">LLM</text></g>
+<g class="ra-right"><circle cx="180" cy="60" r="24" fill="#C2410C"></circle><path d="M170 60l7 7 13-14" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></g>
+</svg>
+</div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600">Cultural alignment of LLMs</h3>
+<p style="margin: 0; color: #5B616B">Measuring and improving how well language models understand local culture, through Sanskriti Bench.</p>
+</div>
+</article>
+
+<article class="card" style="border: 1px solid #E7E5DF; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: #FFFFFF">
+<div style="background: #F3F2EE; border-bottom: 1px solid #E7E5DF; padding: 20px; display: flex; justify-content: center">
+<svg viewBox="0 0 240 120" width="100%" style="max-width: 280px; height: auto" aria-hidden="true">
+<path d="M30 100h180" stroke="#111318" stroke-width="2"></path>
+<rect class="ra-bar ra-b1" x="44" y="40" width="24" height="60" rx="3" fill="#C9C9C3"></rect>
+<rect class="ra-bar ra-b2" x="80" y="58" width="24" height="42" rx="3" fill="#C9C9C3"></rect>
+<rect class="ra-bar ra-b3" x="116" y="28" width="24" height="72" rx="3" fill="#C2410C"></rect>
+<rect class="ra-bar ra-b4" x="152" y="66" width="24" height="34" rx="3" fill="#C9C9C3"></rect>
+<rect class="ra-bar ra-b5" x="188" y="50" width="24" height="50" rx="3" fill="#111318"></rect>
+</svg>
+</div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600">Evaluation &amp; robustness</h3>
+<p style="margin: 0; color: #5B616B">Stress tests that go beyond accuracy: scale sensitivity, image substitution and grounding metrics.</p>
+</div>
+</article>
+
+<article class="card" style="border: 1px solid #E7E5DF; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: #FFFFFF">
+<div style="background: #F3F2EE; border-bottom: 1px solid #E7E5DF; padding: 20px; display: flex; justify-content: center">
+<svg viewBox="0 0 240 120" width="100%" style="max-width: 280px; height: auto" aria-hidden="true">
+<path d="M50 34 104 24 150 52 196 30M50 34 76 84 150 52 180 92M104 24 76 84M150 52 196 30 180 92" fill="none" stroke="#C9C9C3" stroke-width="2"></path>
+<circle cx="50" cy="34" r="8" fill="#111318"></circle>
+<circle cx="104" cy="24" r="8" fill="#111318"></circle>
+<circle class="ra-pulse" cx="150" cy="52" r="11" fill="#C2410C"></circle>
+<circle cx="196" cy="30" r="8" fill="#111318"></circle>
+<circle cx="76" cy="84" r="8" fill="#111318"></circle>
+<circle cx="180" cy="92" r="8" fill="#111318"></circle>
+</svg>
+</div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600">Graph machine learning</h3>
+<p style="margin: 0; color: #5B616B">Learning on relational data, from multi-region epidemic forecasting to graph neural networks.</p>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section id="about" class="band l" style="border-top: 1px solid #E7E5DF">
+<div class="sr" style="max-width: 1200px; margin: 0 auto; padding: 104px 32px; display: flex; flex-wrap: wrap; gap: 56px">
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5B616B"><span class="dot" style="width: 6px; height: 6px; border-radius: 50%; background: #C2410C"></span>About</div>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(2rem, 3.4vw, 2.75rem); line-height: 1.08; letter-spacing: -0.02em">Learn it, apply it, spread it.</h2>
+<p style="margin: 0; color: #5B616B; font-size: 18px">We are an inclusive open AI research platform empowering students and folks to learn and collaborate with each other in AI R&amp;D.</p>
+</div>
+<div style="flex: 999 1 560px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px">
+<div class="card" style="background: #FFFFFF; border: 1px solid #E7E5DF; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<div style="width: 52px; height: 52px; border-radius: 12px; background: #F3F2EE; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#111318" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6 2 12l6 6"></path><path d="m16 6 6 6-6 6"></path></svg></div>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600">Open Source</h3>
+<p style="margin: 0; color: #5B616B">We empower folks to contribute to different open source AI projects and engage with other communities.</p>
+</div>
+<div class="card" style="background: #FFFFFF; border: 1px solid #E7E5DF; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<div style="width: 52px; height: 52px; border-radius: 12px; background: #F3F2EE; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg></div>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600">AI Research</h3>
+<p style="margin: 0; color: #5B616B">We motivate the community to engage with core AI research, innovate newer things, document it and publish it.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section style="border-top: 1px solid #E7E5DF; border-bottom: 1px solid #E7E5DF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 104px 32px; display: flex; flex-direction: column; gap: 44px">
+<div class="sr" style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5B616B"><span class="dot" style="width: 6px; height: 6px; border-radius: 50%; background: #C2410C"></span>What we do</div>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(2rem, 3.4vw, 2.75rem); line-height: 1.08; letter-spacing: -0.02em">Two ways to get involved</h2>
+</div>
+<div class="sr" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 24px">
+
+<article class="card" style="border: 1px solid #E7E5DF; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; background: #FFFFFF">
+<div style="background: #F3F2EE; border-bottom: 1px solid #E7E5DF; padding: 28px; display: flex; justify-content: center">
+<svg viewBox="0 0 320 170" width="100%" style="max-width: 380px; height: auto" aria-hidden="true">
+<rect x="10" y="10" width="200" height="150" rx="10" fill="#FFFFFF" stroke="#D6D3CA" stroke-width="1.5"></rect>
+<path d="M10 34h200" stroke="#E7E5DF" stroke-width="1.5"></path>
+<circle cx="26" cy="22" r="4" fill="#C2410C"></circle><circle cx="40" cy="22" r="4" fill="#5A606B"></circle><circle cx="54" cy="22" r="4" fill="#5A606B"></circle>
+<rect x="26" y="50" width="14" height="8" rx="2" fill="#C2410C"></rect><rect class="type" x="46" y="50" width="110" height="8" rx="2" fill="#3A3F47"></rect>
+<rect x="38" y="70" width="14" height="8" rx="2" fill="#5B616B"></rect><rect class="type t2" x="58" y="70" width="80" height="8" rx="2" fill="#C9C6BE"></rect>
+<rect x="38" y="90" width="14" height="8" rx="2" fill="#5B616B"></rect><rect class="type t3" x="58" y="90" width="120" height="8" rx="2" fill="#C9C6BE"></rect>
+<rect x="26" y="110" width="14" height="8" rx="2" fill="#C2410C"></rect><rect class="type t4" x="46" y="110" width="64" height="8" rx="2" fill="#3A3F47"></rect>
+<rect class="caret" x="26" y="132" width="8" height="14" fill="#C2410C"></rect>
+<path d="M250 30v110M250 70c0 20 40 20 40 40v30" fill="none" stroke="#C9C6BE" stroke-width="2.5"></path>
+<circle cx="250" cy="30" r="8" fill="#FAFAF7" stroke="#111318" stroke-width="2.5"></circle>
+<circle cx="250" cy="70" r="8" fill="#FAFAF7" stroke="#111318" stroke-width="2.5"></circle>
+<circle cx="250" cy="140" r="8" fill="#FAFAF7" stroke="#111318" stroke-width="2.5"></circle>
+<circle class="ra-pulse" cx="290" cy="140" r="9" fill="#C2410C"></circle>
+</svg>
+</div>
+<div style="padding: 28px 32px 32px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600">Projects</h3>
+<p style="margin: 0; color: #5B616B; font-size: 17px">We develop research-intensive projects, implement research papers and publish our code openly.</p>
+</div>
+</article>
+
+<article class="card" style="border: 1px solid #E7E5DF; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; background: #FFFFFF">
+<div style="background: #F3F2EE; border-bottom: 1px solid #E7E5DF; padding: 28px; display: flex; justify-content: center">
+<svg viewBox="0 0 320 170" width="100%" style="max-width: 380px; height: auto" aria-hidden="true">
+<g class="slide">
+<rect x="40" y="10" width="240" height="110" rx="10" fill="#FFFFFF" stroke="#111318" stroke-width="2"></rect>
+<rect x="58" y="28" width="120" height="10" rx="5" fill="#111318"></rect>
+<rect x="58" y="46" width="80" height="7" rx="3.5" fill="#C9C9C3"></rect>
+<rect x="58" y="66" width="70" height="40" rx="4" fill="#F3F2EE" stroke="#E7E5DF"></rect>
+<path class="ra-draw" d="M62 98 76 86l10 8 14-16 12 6 12-10" pathLength="100" fill="none" stroke="#C2410C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+<rect x="146" y="70" width="110" height="7" rx="3.5" fill="#C9C9C3"></rect>
+<rect x="146" y="84" width="90" height="7" rx="3.5" fill="#C9C9C3"></rect>
+<rect x="146" y="98" width="100" height="7" rx="3.5" fill="#C9C9C3"></rect>
+<circle class="dot" cx="262" cy="26" r="5" fill="#C2410C"></circle>
+</g>
+<circle cx="90" cy="150" r="14" fill="#111318"></circle>
+<circle cx="160" cy="150" r="14" fill="#C2410C"></circle>
+<circle cx="230" cy="150" r="14" fill="#5A606B"></circle>
+<g class="talk k1"><rect x="102" y="122" width="36" height="16" rx="8" fill="#111318"></rect><circle cx="112" cy="130" r="2" fill="#FFFFFF"></circle><circle cx="120" cy="130" r="2" fill="#FFFFFF"></circle><circle cx="128" cy="130" r="2" fill="#FFFFFF"></circle></g>
+<g class="talk k2"><rect x="172" y="122" width="36" height="16" rx="8" fill="#C2410C"></rect><circle cx="182" cy="130" r="2" fill="#FFFFFF"></circle><circle cx="190" cy="130" r="2" fill="#FFFFFF"></circle><circle cx="198" cy="130" r="2" fill="#FFFFFF"></circle></g>
+<g class="talk k3"><rect x="242" y="122" width="36" height="16" rx="8" fill="#5A606B"></rect><circle cx="252" cy="130" r="2" fill="#FFFFFF"></circle><circle cx="260" cy="130" r="2" fill="#FFFFFF"></circle><circle cx="268" cy="130" r="2" fill="#FFFFFF"></circle></g>
+</svg>
+</div>
+<div style="padding: 28px 32px 32px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600">Reading groups</h3>
+<p style="margin: 0; color: #5B616B; font-size: 17px">Members run tutorials, paper reading and implementation sessions, or showcase their projects.</p>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section style="background: rgba(243,242,238,.6); border-top: 1px solid #E7E5DF; border-bottom: 1px solid #E7E5DF">
+<div class="sr" style="max-width: 1200px; margin: 0 auto; padding: 104px 32px; display: flex; flex-wrap: wrap; gap: 56px">
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5B616B"><span class="dot" style="width: 6px; height: 6px; border-radius: 50%; background: #C2410C"></span>Latest updates</div>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(2rem, 3.4vw, 2.75rem); line-height: 1.08; letter-spacing: -0.02em">News from the community</h2>
+<p style="margin: 0; color: #5B616B">Announcements, events and milestones from CORD.ai.</p>
+<a href="https://twitter.com/CRforAi" style="color: #C2410C; font-weight: 600; text-decoration: none">Follow @CRforAi <span class="arw" aria-hidden="true">→</span></a>
+</div>
+<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+<div class="row" style="padding: 24px 0; border-radius: 10px; border-top: 1px solid #D6D3CA; display: flex; flex-wrap: wrap; gap: 8px 32px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5B616B; flex: 0 0 140px">Jan 10, 2023</div>
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600">Announcing Symposium'23, our first Deep Learning Symposium</h3>
+<p style="margin: 0; color: #5B616B">Core members and researchers come together to share their knowledge and experience in deep learning.</p>
+</div>
+</div>
+<div class="row" style="padding: 24px 0; border-radius: 10px; border-top: 1px solid #D6D3CA; border-bottom: 1px solid #D6D3CA; display: flex; flex-wrap: wrap; gap: 8px 32px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5B616B; flex: 0 0 140px">Jan 10, 2023</div>
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600">Symposium'23 schedule is out</h3>
+<p style="margin: 0; color: #5B616B">All timings are in IST. Links will be shared on Slack.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="faq" class="band l">
+<div class="sr" style="max-width: 1200px; margin: 0 auto; padding: 104px 32px; display: flex; flex-wrap: wrap; gap: 56px">
+<div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5B616B"><span class="dot" style="width: 6px; height: 6px; border-radius: 50%; background: #C2410C"></span>FAQ</div>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(2rem, 3.4vw, 2.75rem); line-height: 1.08; letter-spacing: -0.02em">Common questions</h2>
+<p style="margin: 0; color: #5B616B">Something else on your mind? <a href="mailto:social.cordai@gmail.com" style="font-weight: 600">Email us</a>.</p>
+</div>
+<div style="flex: 999 1 600px; min-width: 0; display: flex; flex-direction: column; border-top: 1px solid #E7E5DF">
+<details style="border-bottom: 1px solid #E7E5DF; padding: 22px 0" open="">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-weight: 600; font-size: 18px; min-height: 28px"><span>Who can join CORD.ai?</span><span class="faq-plus" style="flex: 0 0 32px; width: 32px; height: 32px; border-radius: 50%; border: 1px solid #E7E5DF; display: inline-flex; align-items: center; justify-content: center; color: #C2410C; font-size: 20px; line-height: 1">+</span></summary>
+<p style="margin: 12px 48px 0 0; color: #5B616B">Students, researchers and engineers at any stage. Beginners are welcome and you don't need a research background. Email us a few lines about yourself and the areas you're interested in, and we'll suggest projects you could join.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E5DF; padding: 22px 0">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-weight: 600; font-size: 18px; min-height: 28px"><span>How do research projects work?</span><span class="faq-plus" style="flex: 0 0 32px; width: 32px; height: 32px; border-radius: 50%; border: 1px solid #E7E5DF; display: inline-flex; align-items: center; justify-content: center; color: #C2410C; font-size: 20px; line-height: 1">+</span></summary>
+<p style="margin: 12px 48px 0 0; color: #5B616B">Members team up around a research question, usually with a core member leading, and work toward a paper. Recent work has appeared at ICLR, ICCV and WACV workshops and in ACL Findings.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E5DF; padding: 22px 0">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-weight: 600; font-size: 18px; min-height: 28px"><span>What happens in reading groups?</span><span class="faq-plus" style="flex: 0 0 32px; width: 32px; height: 32px; border-radius: 50%; border: 1px solid #E7E5DF; display: inline-flex; align-items: center; justify-content: center; color: #C2410C; font-size: 20px; line-height: 1">+</span></summary>
+<p style="margin: 12px 48px 0 0; color: #5B616B">Members present papers, run tutorials and implementation sessions, or demo their own projects. Anyone can propose a session, and recordings go up on our YouTube channel.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E5DF; padding: 22px 0">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-weight: 600; font-size: 18px; min-height: 28px"><span>Is everything online?</span><span class="faq-plus" style="flex: 0 0 32px; width: 32px; height: 32px; border-radius: 50%; border: 1px solid #E7E5DF; display: inline-flex; align-items: center; justify-content: center; color: #C2410C; font-size: 20px; line-height: 1">+</span></summary>
+<p style="margin: 12px 48px 0 0; color: #5B616B">Yes. Our members are spread across universities and companies worldwide, so projects, sessions and discussions all happen online.</p>
+</details>
+<details style="border-bottom: 1px solid #E7E5DF; padding: 22px 0">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-weight: 600; font-size: 18px; min-height: 28px"><span>Do I need a strong math background?</span><span class="faq-plus" style="flex: 0 0 32px; width: 32px; height: 32px; border-radius: 50%; border: 1px solid #E7E5DF; display: inline-flex; align-items: center; justify-content: center; color: #C2410C; font-size: 20px; line-height: 1">+</span></summary>
+<p style="margin: 12px 48px 0 0; color: #5B616B">It helps, but you can pick it up as you go. How much you need depends on the project: applied NLP or evaluation work needs less, optimization and theory need more.</p>
+</details>
+</div>
+</div>
+</section>
+
+<section id="contact" style="background: rgba(243,242,238,.6); border-top: 1px solid #E7E5DF">
+<div class="sr" style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; display: flex; flex-wrap: wrap; gap: 32px 56px; align-items: flex-end; justify-content: space-between">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5B616B"><span class="dot" style="width: 6px; height: 6px; border-radius: 50%; background: #C2410C"></span>Contact</div>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(2rem, 3.4vw, 2.75rem); line-height: 1.08; letter-spacing: -0.02em">Get in touch</h2>
+<p style="margin: 0; color: #5B616B; font-size: 18px">Questions, collaborations or ideas? Write to us and we'll get back to you.</p>
+</div>
+<a class="btn-p" href="mailto:social.cordai@gmail.com" style="display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 28px; background: #111318; color: #FFFFFF; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 18px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>social.cordai@gmail.com</a>
+</div>
+</section>
+
+
+<footer style="font-family: Inter, system-ui, sans-serif; background: #F3F2EE; color: #111318; border-top: 1px solid #E7E5DF; font-size: 15px; line-height: 1.6">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 32px 32px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-wrap: wrap; gap: 40px 56px">
+<div style="flex: 2 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; gap: 10px"><img src="/assets/site/7eeb4da85ca34c05df0244302b764256.png" alt="" style="width: 44px; height: 38px; object-fit: contain"><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 24px">CORD.ai</span></div>
+<p style="margin: 0; color: #5B616B; max-width: 360px">A Collaborative Open Research in Deep Learning.</p>
+<a href="mailto:social.cordai@gmail.com" style="color: #C2410C; text-decoration: none; font-weight: 500">social.cordai@gmail.com</a>
+</div>
+<nav aria-label="Footer" style="flex: 1 1 160px; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #5B616B; margin-bottom: 8px">Explore</div>
+<a href="/#about" style="color: #111318; text-decoration: none; min-height: 32px">About us</a>
+<a href="/team.html" style="color: #111318; text-decoration: none; min-height: 32px">Team</a>
+<a href="/research.html" style="color: #111318; text-decoration: none; min-height: 32px">Research</a>
+<a href="/join.html" style="color: #111318; text-decoration: none; min-height: 32px">Join us</a>
+</nav>
+<div style="flex: 1 1 160px; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #5B616B; margin-bottom: 8px">Follow</div>
+<a href="https://twitter.com/CRforAi" style="color: #111318; text-decoration: none; min-height: 32px">Twitter / X</a>
+<a href="https://www.youtube.com/@cordai530" style="color: #111318; text-decoration: none; min-height: 32px">YouTube</a>
+<a href="https://github.com/CORD-ai" style="color: #111318; text-decoration: none; min-height: 32px">GitHub</a>
+</div>
+</div>
+<div style="border-top: 1px solid #E7E5DF; padding-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: #5B616B; font-size: 14px">
+<span>© CORD.ai. All rights reserved.</span>
+<a href="https://github.com/CORD-ai/cord-website" style="color: #5B616B">Contribute to this website on GitHub</a>
+</div>
+</div>
+</footer>
+
+</div>
 </body>
-
 </html>
